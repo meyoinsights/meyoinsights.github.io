@@ -1,0 +1,29 @@
+---
+import '../styles/global.css';
+const {title = 'Meyo Insights', description = 'A public research journal exploring businesses, industries, markets and the ideas that help us understand them.'} = Astro.props;
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content={description} />
+    <meta name="theme-color" content="#173d35" />
+    <title>{title} | Meyo Insights</title>
+  </head>
+  <body>
+    <header class="site-header wrap">
+      <a class="brand" href="/">MEYO <span>/</span> INSIGHTS</a>
+      <nav aria-label="Main navigation">
+        <a href="/">Home</a>
+        <a href="/blog/">Research</a>
+        <a href="/about/">About</a>
+      </nav>
+    </header>
+    <main><slot /></main>
+    <footer class="site-footer wrap">
+      <div><strong>Meyo Insights</strong><p>The pursuit of better investment judgment.</p></div>
+      <p>Independent research journal</p>
+    </footer>
+  </body>
+</html>

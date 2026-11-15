@@ -1,0 +1,27 @@
+---
+import SiteLayout from '../../layouts/SiteLayout.astro';
+const modules = Object.values(import.meta.glob('./*.md', { eager: true }));
+const articles = modules.map((post) => ({
+  title: post.frontmatter?.title ?? 'Untitled',
+  description: post.frontmatter?.description ?? '',
+  date: post.frontmatter?.pubDate ?? '',
+  url: post.url,
+})).sort((a,b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+---
+<SiteLayout title="Research">
+  <section class="section wrap">
+    <p class="eyebrow">The research journal</p>
+    <h1>Read the research.</h1>
+    <p>Original company studies, industry research and lessons in investment judgment.</p>
+    {articles.length > 0 ?
+      <div class="article-grid">{articles.map(post =>
+        <div class="article-card">
+          <p class="eyebrow">{post.date || 'Research note'}</p>
+          <h3><a href={post.url}>{post.title}</a></h3>
+          <p>{post.description}</p>
+        </div>
+      )}</div>
+      : <div class="topic" style="margin-top:42px"><h3>First essays in review</h3><p>New pieces appear here when their sources and writing have been reviewed and approved for publication.</p></div>
+    }
+  </section>
+</SiteLayout>

@@ -1,0 +1,18 @@
+---
+import SiteLayout from './SiteLayout.astro';
+const {frontmatter} = Astro.props;
+const title = frontmatter.title ?? 'Research note';
+const description = frontmatter.description ?? 'Original research and investment learning.';
+const date = frontmatter.pubDate ? new Date(frontmatter.pubDate) : null;
+---
+<SiteLayout title={title} description={description}>
+  <article class="article wrap">
+    <a class="eyebrow" href="/blog/">← Back to research</a>
+    <p class="eyebrow">{frontmatter.category ?? 'RESEARCH JOURNAL'}</p>
+    <h1>{title}</h1>
+    <p class="article-deck">{description}</p>
+    {date && !Number.isNaN(+date) && <p class="muted">Published {date.toLocaleDateString('en-KE', {year: 'numeric',month: 'long',day: 'numeric'})}</p>}
+    <div class="prose"><slot /></div>
+    <p class="disclaimer">This journal is for research and education, not personalized investment advice. Read the sources and limitations before relying on a conclusion.</p>
+  </article>
+</SiteLayout>
