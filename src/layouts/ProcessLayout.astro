@@ -1,0 +1,14 @@
+---
+import SiteLayout from './SiteLayout.astro';
+const {frontmatter} = Astro.props;
+---
+<SiteLayout title={frontmatter.title ?? 'Our Process'} description={frontmatter.description}>
+  <article class="article wrap">
+    <p class="eyebrow">Meyo Insights · Research method</p>
+    <h1>Our Process</h1>
+    <p class="article-deck">How we examine businesses, industries, evidence and investment ideas.</p>
+    {frontmatter.author && <p class="muted">By {frontmatter.author}</p>}
+    <div class="prose"><slot /></div>
+    <p class="disclaimer">This page describes our approach to research. It is not an assurance that every report is complete or a source of personalized investment advice.</p>
+  </article>
+</SiteLayout>
