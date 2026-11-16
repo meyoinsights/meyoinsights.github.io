@@ -7,49 +7,49 @@
  <rect x="29" y="45" width="66" height="66" rx="18" fill="#eaf1e6"/>
  <text x="62" y="88" text-anchor="middle" font-family="Georgia,serif" font-size="31" fill="#1f4937">1</text>
  <text x="113" y="66" font-family="Georgia,serif" font-weight="bold" font-size="23" fill="#173d35">Explore</text>
- <text x="113" y="100" font-family="Arial,sans-serif" font-size="17" fill="#536f61">Companies, industries and market shifts</text>
+ <text x="113" y="100" font-family="Arial,sans-serif" font-size="17" fill="#536f61">Companies, industries, trends</text>
  </g><g>
  <rect x="12" y="206" width="456" height="145" rx="20" fill="#fffdf9" stroke="#8caa91" stroke-width="2"/>
  <rect x="29" y="233" width="66" height="66" rx="18" fill="#eaf1e6"/>
  <text x="62" y="276" text-anchor="middle" font-family="Georgia,serif" font-size="31" fill="#1f4937">2</text>
  <text x="113" y="254" font-family="Georgia,serif" font-weight="bold" font-size="23" fill="#173d35">Gather evidence</text>
- <text x="113" y="288" font-family="Arial,sans-serif" font-size="17" fill="#536f61">Filings, reports, data and studies</text>
+ <text x="113" y="288" font-family="Arial,sans-serif" font-size="17" fill="#536f61">Filings, reports, data</text>
  </g><g>
  <rect x="12" y="394" width="456" height="145" rx="20" fill="#fffdf9" stroke="#8caa91" stroke-width="2"/>
  <rect x="29" y="421" width="66" height="66" rx="18" fill="#eaf1e6"/>
  <text x="62" y="464" text-anchor="middle" font-family="Georgia,serif" font-size="31" fill="#1f4937">3</text>
  <text x="113" y="442" font-family="Georgia,serif" font-weight="bold" font-size="23" fill="#173d35">Understand the economics</text>
- <text x="113" y="476" font-family="Arial,sans-serif" font-size="17" fill="#536f61">Customers, competitors and incentives</text>
+ <text x="113" y="476" font-family="Arial,sans-serif" font-size="17" fill="#536f61">Customers, costs, competition</text>
  </g><g>
  <rect x="12" y="582" width="456" height="145" rx="20" fill="#fffdf9" stroke="#8caa91" stroke-width="2"/>
  <rect x="29" y="609" width="66" height="66" rx="18" fill="#eaf1e6"/>
  <text x="62" y="652" text-anchor="middle" font-family="Georgia,serif" font-size="31" fill="#1f4937">4</text>
  <text x="113" y="630" font-family="Georgia,serif" font-weight="bold" font-size="23" fill="#173d35">Examine the accounts</text>
- <text x="113" y="664" font-family="Arial,sans-serif" font-size="17" fill="#536f61">Profit, cash flow, debt and notes</text>
+ <text x="113" y="664" font-family="Arial,sans-serif" font-size="17" fill="#536f61">Profit, cash, debt</text>
  </g><g>
  <rect x="12" y="770" width="456" height="145" rx="20" fill="#fffdf9" stroke="#8caa91" stroke-width="2"/>
  <rect x="29" y="797" width="66" height="66" rx="18" fill="#eaf1e6"/>
  <text x="62" y="840" text-anchor="middle" font-family="Georgia,serif" font-size="31" fill="#1f4937">5</text>
  <text x="113" y="818" font-family="Georgia,serif" font-weight="bold" font-size="23" fill="#173d35">Assess value and price</text>
- <text x="113" y="852" font-family="Arial,sans-serif" font-size="17" fill="#536f61">Quality, scenarios and margin of safety</text>
+ <text x="113" y="852" font-family="Arial,sans-serif" font-size="17" fill="#536f61">Quality, value, price</text>
  </g><g>
  <rect x="12" y="958" width="456" height="145" rx="20" fill="#fffdf9" stroke="#8caa91" stroke-width="2"/>
  <rect x="29" y="985" width="66" height="66" rx="18" fill="#eaf1e6"/>
  <text x="62" y="1028" text-anchor="middle" font-family="Georgia,serif" font-size="31" fill="#1f4937">6</text>
  <text x="113" y="1006" font-family="Georgia,serif" font-weight="bold" font-size="23" fill="#173d35">Challenge the thesis</text>
- <text x="113" y="1040" font-family="Arial,sans-serif" font-size="17" fill="#536f61">Risks, cycles and the opposing case</text>
+ <text x="113" y="1040" font-family="Arial,sans-serif" font-size="17" fill="#536f61">Risks and counterarguments</text>
  </g><g>
  <rect x="12" y="1146" width="456" height="145" rx="20" fill="#fffdf9" stroke="#8caa91" stroke-width="2"/>
  <rect x="29" y="1173" width="66" height="66" rx="18" fill="#eaf1e6"/>
  <text x="62" y="1216" text-anchor="middle" font-family="Georgia,serif" font-size="31" fill="#1f4937">7</text>
  <text x="113" y="1194" font-family="Georgia,serif" font-weight="bold" font-size="23" fill="#173d35">Explain the findings</text>
- <text x="113" y="1228" font-family="Arial,sans-serif" font-size="17" fill="#536f61">Clear writing, sources and uncertainty</text>
+ <text x="113" y="1228" font-family="Arial,sans-serif" font-size="17" fill="#536f61">Evidence, reasoning, limits</text>
  </g><g>
  <rect x="12" y="1334" width="456" height="145" rx="20" fill="#fffdf9" stroke="#8caa91" stroke-width="2"/>
  <rect x="29" y="1361" width="66" height="66" rx="18" fill="#eaf1e6"/>
  <text x="62" y="1404" text-anchor="middle" font-family="Georgia,serif" font-size="31" fill="#1f4937">8</text>
  <text x="113" y="1382" font-family="Georgia,serif" font-weight="bold" font-size="23" fill="#173d35">Review, publish, revisit</text>
- <text x="113" y="1416" font-family="Arial,sans-serif" font-size="17" fill="#536f61">Human approval, corrections and learning</text>
+ <text x="113" y="1416" font-family="Arial,sans-serif" font-size="17" fill="#536f61">Approval, corrections, learning</text>
  </g>
 <g stroke="#6b9470" stroke-width="4" stroke-linecap="round" marker-end="url(#arrow)">
 <path d="M240 166 V201" /><path d="M240 354 V389" /><path d="M240 542 V577" /><path d="M240 730 V765" /><path d="M240 918 V953" /><path d="M240 1106 V1141" /><path d="M240 1294 V1329" />
