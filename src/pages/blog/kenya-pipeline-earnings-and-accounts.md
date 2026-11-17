@@ -77,6 +77,8 @@ That is roughly **KES 2.75 billion apart**, even though the figures refer to the
 
 The comparison is not proof that either statement is false. The IPO's compilation contains adjustments, and accounts can change through restatements, different accounting treatments, or later presentation. KPRL's inclusion in group reporting is another important point of context. But none of these general explanations is, by itself, a completed reconciliation of this particular difference.
 
+The original FY2025 full annual report adds another comparison point: it presents **KES 11.16 billion** as the parent's profit after tax, whereas the IPO's **compiled parent-company** statement presents **KES 8.48 billion**. The [original FY2025 audited report](https://libraryir.parliament.go.ke/items/3db9fb13-5f4b-4ab2-9e00-413e3353c34e) (company statement, PDF p. 102) and the IPO compilation therefore should not be silently combined either. That difference still needs a documented, line-by-line bridge.
+
 The IPO contains a summary of adjustments to the previously audited statements. Our next job is to trace the relevant profit figures from the original FY2025 audit through those adjustments and into the FY2026 comparative. Until that bridge is independently checked, **we should keep the figures in their separate series**.
 
 Why does this matter?
