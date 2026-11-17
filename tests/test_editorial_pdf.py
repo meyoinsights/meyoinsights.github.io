@@ -98,5 +98,32 @@ This must not publish.
         self.assertIn("14 November 2026", rendered)
         self.assertIn("https://x.com/meyo_insights", rendered)
 
+
+    def test_editorial_issue_001_has_evidence_backed_art_direction(self):
+        src = ROOT / "src/pages/blog/kenya-pipeline-is-share-price-justified.md"
+        metadata, body = publisher.parse_article(src)
+        self.assertEqual(metadata["issue"], "001")
+        self.assertEqual(metadata["editorial"]["displayTitle"], "KPC: Testing the investment case.")
+        self.assertEqual(len(metadata["editorial"]["takeaways"]), 4)
+        self.assertEqual(len(metadata["editorial"]["exhibits"]), 4)
+        publisher.assert_evidence(metadata, body)
+        html = publisher.build_html(metadata, body)
+        self.assertIn('class="publication-cover"', html)
+        self.assertIn('class="brief-page"', html)
+        self.assertIn('class="kind-compare"', html)
+        self.assertIn('class="kind-valuation"', html)
+        self.assertIn('https://x.com/meyo_insights', html)
+        self.assertIn("## Notes", body)
+        self.assertIn("## References", body)
+
+    def test_editorial_rejects_unsupported_chart_values(self):
+        meta = {"editorial":{"exhibits":[
+            {"kind":"bar", "title":"Unverified chart", "source":"[S01]",
+             "caveat":"Unknown.", "beforeHeading":"Evidence",
+             "data":[{"label":"FY2026","value":123456.78}]}
+        ]}}
+        with self.assertRaises(ValueError):
+            publisher.assert_evidence(meta, "## Evidence\\n\\n[S01] Published source.")
+
 if __name__ == "__main__":
     unittest.main()
