@@ -74,9 +74,9 @@ This must not publish.
         metadata, body = publisher.parse_article(source)
         self.assertEqual(metadata["issue"], "001")
         self.assertEqual(metadata["ticker"], "KPC")
-        self.assertIn("## Notes\\n", body)
-        self.assertIn("## References\\n", body)
-        self.assertLess(body.index("## Notes\\n"), body.index("## References\\n"))
+        self.assertIn("## Notes\n", body)
+        self.assertIn("## References\n", body)
+        self.assertLess(body.index("## Notes\n"), body.index("## References\n"))
         self.assertIn("KES 124.57 billion", body)
         self.assertIn("KES 144.70 billion", body)
         self.assertIn("KES 10.70", body)
@@ -92,7 +92,7 @@ This must not publish.
             "marketReference": "KES 10.70 · 13 November 2026",
             "publicationStatus": "Independent analysis",
         }
-        rendered = publisher.build_html(meta, "## Notes\\n\\nUnresolved.\\n\\n## References\\n\\n[S01] Example.")
+        rendered = publisher.build_html(meta, "## Notes\n\nUnresolved.\n\n## References\n\n[S01] Example.")
         self.assertIn("ISSUE 001", rendered)
         self.assertIn("NSE: KPC", rendered)
         self.assertIn("14 November 2026", rendered)
