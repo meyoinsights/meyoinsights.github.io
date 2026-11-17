@@ -68,5 +68,35 @@ This must not publish.
             with self.assertRaises(ValueError):
                 publisher.parse_article(path)
 
+
+    def test_issue_001_notes_and_references_order(self):
+        source = ROOT / "src/pages/blog/kenya-pipeline-is-share-price-justified.md"
+        metadata, body = publisher.parse_article(source)
+        self.assertEqual(metadata["issue"], "001")
+        self.assertEqual(metadata["ticker"], "KPC")
+        self.assertIn("## Notes\\n", body)
+        self.assertIn("## References\\n", body)
+        self.assertLess(body.index("## Notes\\n"), body.index("## References\\n"))
+        self.assertIn("KES 124.57 billion", body)
+        self.assertIn("KES 144.70 billion", body)
+        self.assertIn("KES 10.70", body)
+        self.assertIn("[S01]", body)
+        self.assertIn("[O09]", body)
+        self.assertGreater(len(body), 40000)
+
+    def test_publication_pdf_metadata_and_reader_link(self):
+        meta = {
+            "title": "Example", "description": "Test", "author": "widdzz",
+            "pubDate": "2026-11-18", "issue": "001", "exchange": "NSE",
+            "ticker": "KPC", "researchAsOf": "14 November 2026",
+            "marketReference": "KES 10.70 · 13 November 2026",
+            "publicationStatus": "Independent analysis",
+        }
+        rendered = publisher.build_html(meta, "## Notes\\n\\nUnresolved.\\n\\n## References\\n\\n[S01] Example.")
+        self.assertIn("ISSUE 001", rendered)
+        self.assertIn("NSE: KPC", rendered)
+        self.assertIn("14 November 2026", rendered)
+        self.assertIn("https://x.com/meyo_insights", rendered)
+
 if __name__ == "__main__":
     unittest.main()
