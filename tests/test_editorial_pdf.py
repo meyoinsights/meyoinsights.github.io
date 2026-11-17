@@ -98,5 +98,31 @@ This must not publish.
         self.assertIn("14 November 2026", rendered)
         self.assertIn("https://x.com/meyo_insights", rendered)
 
+
+    def test_issue_001_exhibits_are_evidence_backed(self):
+        source = ROOT / "src/pages/blog/kenya-pipeline-is-share-price-justified.md"
+        meta, body = publisher.parse_article(source)
+        publisher.assert_evidence(meta, body)
+        rendered = publisher.build_html(meta, body)
+        self.assertIn('class="brief-page"', rendered)
+        self.assertIn('class="cover-band"', rendered)
+        self.assertIn('One financial year. Two profit figures.', rendered)
+        self.assertIn('A price is a fact. A value is a model.', rendered)
+        self.assertIn('https://x.com/meyo_insights', rendered)
+        self.assertEqual(rendered.count('class="evidence-exhibit '), 4)
+        self.assertIn('## Notes', body)
+        self.assertIn('## References', body)
+
+    def test_reject_unsupported_chart_value(self):
+        metadata = {
+            "editorial": {"exhibits": [
+                {"kind": "bar", "title": "Unsupported", "source": "[S01]",
+                 "caveat": "Draft", "beforeHeading": "Evidence",
+                 "data": [{"label": "FY", "value": 999999.9}]}
+            ]}
+        }
+        with self.assertRaises(ValueError):
+            publisher.assert_evidence(metadata, "## Evidence\n\n[S01] Source.")
+
 if __name__ == "__main__":
     unittest.main()
