@@ -2947,10 +2947,10 @@
     {
       "id": "mi-83",
       "type": "arrow",
-      "x": 1390,
-      "y": 260,
-      "width": 60,
-      "height": 742,
+      "x": 420,
+      "y": 132,
+      "width": 1040,
+      "height": 870,
       "angle": 0,
       "strokeColor": "#648871",
       "backgroundColor": "transparent",
@@ -2965,7 +2965,7 @@
         "type": 2
       },
       "seed": 4283,
-      "version": 1,
+      "version": 2,
       "versionNonce": 10083,
       "isDeleted": false,
       "boundElements": null,
@@ -2974,24 +2974,24 @@
       "locked": false,
       "points": [
         [
-          13,
-          742
+          983,
+          870
         ],
         [
-          60,
-          742
+          1040,
+          870
         ],
         [
-          60,
-          70
-        ],
-        [
-          0,
-          70
+          1040,
+          0
         ],
         [
           0,
           0
+        ],
+        [
+          0,
+          53
         ]
       ],
       "startBinding": null,
@@ -3101,6 +3101,59 @@
       "originalText": "COLLECTED ≠ VERIFIED       •       DRAFTED ≠ PUBLISHED       •       PUBLICATION REQUIRES OWNER APPROVAL",
       "lineHeight": 1.25,
       "autoResize": false
+    },
+    {
+      "id": "tech-research-to-draft",
+      "type": "arrow",
+      "x": 420,
+      "y": 532,
+      "width": 823,
+      "height": 164,
+      "angle": 0,
+      "strokeColor": "#648871",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 2,
+      "strokeStyle": "solid",
+      "roughness": 1.5,
+      "opacity": 100,
+      "groupIds": [],
+      "frameId": null,
+      "roundness": {
+        "type": 2
+      },
+      "seed": 9086,
+      "version": 1,
+      "versionNonce": 15086,
+      "isDeleted": false,
+      "boundElements": null,
+      "updated": 1,
+      "link": null,
+      "locked": false,
+      "points": [
+        [
+          823,
+          0
+        ],
+        [
+          823,
+          108
+        ],
+        [
+          0,
+          108
+        ],
+        [
+          0,
+          164
+        ]
+      ],
+      "startBinding": null,
+      "endBinding": null,
+      "lastCommittedPoint": null,
+      "startArrowhead": null,
+      "endArrowhead": "arrow",
+      "elbowed": false
     }
   ],
   "appState": {
