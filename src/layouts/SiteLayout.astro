@@ -9,6 +9,10 @@ const {title = 'Meyo Insights', description = 'A public research journal explori
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content={description} />
     <meta name="theme-color" content="#173d35" />
+    <meta property="og:site_name" content="Meyo Insights" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta name="twitter:card" content="summary" />
     <title>{title} | Meyo Insights</title>
     <!-- No third-party analytics tag loads before explicit acceptance. -->
     <script is:inline defer src="/analytics-consent.js"></script>
@@ -21,11 +25,12 @@ const {title = 'Meyo Insights', description = 'A public research journal explori
         <a href="/blog/">Research</a>
         <a href="/process/">Our Process</a>
         <a href="/about/">About</a>
+        <a class="nav-social" href="https://x.com/meyo_insights" target="_blank" rel="noopener noreferrer" aria-label="Follow Meyo Insights on X">Follow on X ↗</a>
       </nav>
     </header>
     <main><slot /></main>
     <footer class="site-footer wrap">
-      <div><strong>Meyo Insights</strong><p>The pursuit of better investment judgment.</p></div>
+      <div><strong>Meyo Insights</strong><p>The pursuit of better investment judgment.</p><p><a class="footer-follow" href="https://x.com/meyo_insights" target="_blank" rel="noopener noreferrer">Follow @meyo_insights on X ↗</a></p></div>
       <div class="footer-privacy">
         <p>Independent research journal</p>
         <a href="/privacy/">Privacy</a>

@@ -6,6 +6,8 @@ const articles = modules.map((post) => ({
   description: post.frontmatter?.description ?? '',
   date: post.frontmatter?.pubDate ?? '',
   url: post.url,
+  category: post.frontmatter?.category ?? "Research",
+  issue: post.frontmatter?.issue,
 })).sort((a,b) => new Date(b.date).getTime() - new Date(a.date).getTime());
 ---
 <SiteLayout title="Research">
@@ -16,12 +18,13 @@ const articles = modules.map((post) => ({
     {articles.length > 0 ?
       <div class="article-grid">{articles.map(post =>
         <div class="article-card">
-          <p class="eyebrow">{post.date || 'Research note'}</p>
+          <p class="eyebrow">{post.issue ? `ISSUE ${post.issue} · ` : ''}{post.category} / {post.date || 'Research note'}</p>
           <h3><a href={post.url}>{post.title}</a></h3>
           <p>{post.description}</p>
         </div>
       )}</div>
       : <div class="topic" style="margin-top:42px"><h3>First essays in review</h3><p>New pieces appear here when their sources and writing have been reviewed and approved for publication.</p></div>
     }
+    <p class="research-follow">Research is ongoing. <a href="https://x.com/meyo_insights" target="_blank" rel="noopener noreferrer">Follow @meyo_insights on X ↗</a> for new reports and updates.</p>
   </section>
 </SiteLayout>
