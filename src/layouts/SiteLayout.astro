@@ -10,6 +10,8 @@ const {title = 'Meyo Insights', description = 'A public research journal explori
     <meta name="description" content={description} />
     <meta name="theme-color" content="#173d35" />
     <title>{title} | Meyo Insights</title>
+    <!-- No third-party analytics tag loads before explicit acceptance. -->
+    <script is:inline defer src="/analytics-consent.js"></script>
   </head>
   <body>
     <header class="site-header wrap">
@@ -24,7 +26,18 @@ const {title = 'Meyo Insights', description = 'A public research journal explori
     <main><slot /></main>
     <footer class="site-footer wrap">
       <div><strong>Meyo Insights</strong><p>The pursuit of better investment judgment.</p></div>
-      <p>Independent research journal</p>
+      <div class="footer-privacy">
+        <p>Independent research journal</p>
+        <a href="/privacy/">Privacy</a>
+        <button id="analytics-preferences" class="footer-preferences" type="button">Analytics settings</button>
+      </div>
     </footer>
+    <aside class="analytics-consent" id="analytics-consent" role="region" aria-label="Optional website analytics" hidden>
+      <p>May we use optional analytics to understand which research pages are useful? Google Tag Manager loads only if you accept. <a href="/privacy/">Privacy details</a>.</p>
+      <div class="analytics-actions">
+        <button id="analytics-accept" type="button">Accept analytics</button>
+        <button id="analytics-decline" type="button">Decline</button>
+      </div>
+    </aside>
   </body>
 </html>
