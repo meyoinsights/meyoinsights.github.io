@@ -186,3 +186,11 @@ body { margin: 0; }
 .report a { color: #2d715a; text-decoration: underline; }
 .report code { font: 8pt monospace; background: #f5f5f0; padding: 0 2pt; }
 .report pre { padding: 4mm; background: #f0f1ed; white-space: pre-wrap; overflow-wrap: anywhere; }
+
+/* Preserve editorial colour when the HTML is printed through a browser. */
+@media print {
+  html, body, .cover, .cover *, .report, .report *, .masthead, .status {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+}
