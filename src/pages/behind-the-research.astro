@@ -1,0 +1,36 @@
+---
+import SiteLayout from '../layouts/SiteLayout.astro';
+---
+<SiteLayout title="Behind the Research" description="The software and editorial safeguards that support Meyo Insights.">
+  <section class="section wrap architecture">
+    <p class="eyebrow">How the work is supported</p>
+    <h1>Behind the Research</h1>
+    <p class="lead">Tools help us collect and organize evidence. They do not replace human judgment.</p>
+    <figure class="architecture-visual">
+      <picture>
+        <source media="(max-width: 740px)" srcset="/behind-the-research-sketch-mobile.svg" />
+        <img src="/behind-the-research-sketch.svg" width="1450" height="965" alt="Sources and conversations feed a private Python and GitHub research workspace. Research is verified and reviewed by people, with a separate approval boundary before publication on Astro and GitHub Pages." loading="eager" />
+      </picture>
+      <figcaption>An illustrative architecture, not a claim of fully automated or fully operational features. <a href="https://github.com/meyoinsights/meyoinsights.github.io/blob/main/diagrams/behind-the-research.excalidraw">Edit the diagram in Excalidraw</a>.</figcaption>
+    </figure>
+    <div class="architecture-copy">
+      <h2>What we currently use</h2>
+      <p><strong>Python</strong> supports RSS intake, source inventories and structured research. <strong>GitHub Issues and pull requests</strong> organize research, drafts and review. <strong>GitHub Actions</strong> runs checks and scheduled collection. The public journal uses <strong>Astro on GitHub Pages</strong>.</p>
+      <h2>Where people decide</h2>
+      <p>Tools may assist with collecting sources, calculations and drafts, but primary-source verification, interpretation and editorial approval remain human responsibilities. Only deliberately approved copy crosses from private research into the public repository.</p>
+      <h2>What's evolving</h2>
+      <p>The breadth of news collection, evidence extraction, research analytics and newsletter distribution are works in progress. We describe them as such rather than claim they are finished. Google Tag Manager and GA4 support optional consented website analytics; configuration and collection must be verified independently.</p>
+      <p><a href="/process/">Return to Our Process →</a></p>
+    </div>
+  </section>
+</SiteLayout>
+<style>
+.architecture { padding-block: 50px 95px; }
+.architecture h1 { font: normal clamp(42px, 5vw, 65px)/1.15 Georgia,serif; letter-spacing:-.03em; }
+.architecture-visual { width: min(1280px,calc(100vw - 36px)); margin: 42px 0 46px 50%; transform:translateX(-50%); border:1px solid #d7e0d7; border-radius:20px; background:#fffdf8; padding:20px; }
+.architecture-visual picture,.architecture-visual img { display:block; width:100%; height:auto; }
+.architecture-visual figcaption { text-align:center; font-size:13px; color:#536f61; margin-top:10px; }
+.architecture-copy { max-width:790px; font-size:17px; line-height:1.7; }
+.architecture-copy h2 { font:normal 31px Georgia,serif; margin:35px 0 5px; }
+@media(max-width:740px) { .architecture-visual{padding:7px; border-radius:12px;} }
+</style>

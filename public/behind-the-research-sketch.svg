@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1450" height="965" viewBox="0 0 1450 965" role="img" aria-labelledby="ttl desc"><title id="ttl">Meyo Insights architecture sketch</title><desc id="desc">Market news, original documents and chat research feed the private Python and GitHub workspace. Human review and explicit owner approval separate private research from the public Astro and GitHub Pages website.</desc><defs><marker id="arrow" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto"><path d="M0 0 L8 4.5 L0 9" fill="none" stroke="#6b9470" stroke-width="1.7"/></marker></defs><rect x="0" y="0" width="1448" height="963" rx="18" fill="#fffdf8" stroke="#e0e9df" stroke-width="2.4"/>
+<text x="50" y="66" font-family="'Comic Sans MS','Trebuchet MS',sans-serif" font-size="34" font-weight="bold" fill="#173d35"><tspan x="50" dy="0">MEYO INSIGHTS  /  BEHIND THE RESEARCH</tspan></text>
+<text x="50" y="104" font-family="'Comic Sans MS','Trebuchet MS',sans-serif" font-size="19"  fill="#536f61"><tspan x="50" dy="0">The software supports the process. Evidence checks and publication decisions are human.</tspan></text>
+<text x="45" y="162" font-family="'Comic Sans MS','Trebuchet MS',sans-serif" font-size="17" font-weight="bold" fill="#173d35"><tspan x="45" dy="0">INPUTS</tspan></text>
+<rect x="45" y="185" width="310" height="134" rx="18" fill="#eef6ee" stroke="#6b9470" stroke-width="2.4"/>
+<text x="63" y="219" font-family="'Comic Sans MS','Trebuchet MS',sans-serif" font-size="22" font-weight="bold" fill="#173d35"><tspan x="63" dy="0">Feeds &amp; market news</tspan></text>
+<text x="63" y="249" font-family="'Comic Sans MS','Trebuchet MS',sans-serif" font-size="17"  fill="#536f61"><tspan x="63" dy="0">RSS, business news,</tspan><tspan x="63" dy="21.76">company developments</tspan></text>
+<text x="63" y="295" font-family="'Comic Sans MS','Trebuchet MS',sans-serif" font-size="15"  fill="#52755d"><tspan x="63" dy="0">Python · GitHub Actions</tspan></text>
+<rect x="405" y="185" width="310" height="134" rx="18" fill="#fff9ec" stroke="#6b9470" stroke-width="2.4"/>
+<text x="423" y="219" font-family="'Comic Sans MS','Trebuchet MS',sans-serif" font-size="22" font-weight="bold" fill="#173d35"><tspan x="423" dy="0">Original evidence</tspan></text>
+<text x="423" y="249" font-family="'Comic Sans MS','Trebuchet MS',sans-serif" font-size="17"  fill="#536f61"><tspan x="423" dy="0">Reports, filings, studies,</tspan><tspan x="423" dy="21.76">source documents</tspan></text>
+<text x="423" y="295" font-family="'Comic Sans MS','Trebuchet MS',sans-serif" font-size="15"  fill="#52755d"><tspan x="423" dy="0">Manual sourcing · source links</tspan></text>
+<rect x="765" y="185" width="310" height="134" rx="18" fill="#eef6ee" stroke="#6b9470" stroke-width="2.4"/>
+<text x="783" y="219" font-family="'Comic Sans MS','Trebuchet MS',sans-serif" font-size="22" font-weight="bold" fill="#173d35"><tspan x="783" dy="0">Chat research</tspan></text>
+<text x="783" y="249" font-family="'Comic Sans MS','Trebuchet MS',sans-serif" font-size="17"  fill="#536f61"><tspan x="783" dy="0">Research ideas and</tspan><tspan x="783" dy="21.76">conversation references</tspan></text>
+<text x="783" y="295" font-family="'Comic Sans MS','Trebuchet MS',sans-serif" font-size="15"  fill="#52755d"><tspan x="783" dy="0">Python · source collector</tspan></text>
+<text x="45" y="378" font-family="'Comic Sans MS','Trebuchet MS',sans-serif" font-size="19" font-weight="bold" fill="#173d35"><tspan x="45" dy="0">PRIVATE RESEARCH WORKSPACE</tspan></text>
+<rect x="45" y="395" width="1090" height="258" rx="18" fill="#f1f6f1" stroke="#94ac98" stroke-width="2.4"/>
+<rect x="68" y="420" width="315" height="134" rx="18" fill="#eef6ee" stroke="#6b9470" stroke-width="2.4"/>
+<text x="86" y="454" font-family="'Comic Sans MS','Trebuchet MS',sans-serif" font-size="22" font-weight="bold" fill="#173d35"><tspan x="86" dy="0">Capture &amp; classify</tspan></text>
+<text x="86" y="484" font-family="'Comic Sans MS','Trebuchet MS',sans-serif" font-size="17"  fill="#536f61"><tspan x="86" dy="0">Rank headlines and</tspan><tspan x="86" dy="21.76">collect source pointers</tspan></text>
+<text x="86" y="530" font-family="'Comic Sans MS','Trebuchet MS',sans-serif" font-size="15"  fill="#52755d"><tspan x="86" dy="0">Python · JSON records</tspan></text>
+<rect x="430" y="420" width="315" height="134" rx="18" fill="#fff9ec" stroke="#6b9470" stroke-width="2.4"/>
+<text x="448" y="454" font-family="'Comic Sans MS','Trebuchet MS',sans-serif" font-size="22" font-weight="bold" fill="#173d35"><tspan x="448" dy="0">Evidence &amp; analysis</tspan></text>
+<text x="448" y="484" font-family="'Comic Sans MS','Trebuchet MS',sans-serif" font-size="17"  fill="#536f61"><tspan x="448" dy="0">Verify figures and scope;</tspan><tspan x="448" dy="21.76">model possible outcomes</tspan></text>
+<text x="448" y="530" font-family="'Comic Sans MS','Trebuchet MS',sans-serif" font-size="15"  fill="#52755d"><tspan x="448" dy="0">Python + human judgment</tspan></text>
+<rect x="788" y="420" width="320" height="134" rx="18" fill="#fff9ec" stroke="#6b9470" stroke-width="2.4"/>
+<text x="806" y="454" font-family="'Comic Sans MS','Trebuchet MS',sans-serif" font-size="22" font-weight="bold" fill="#173d35"><tspan x="806" dy="0">Editorial review</tspan></text>
+<text x="806" y="484" font-family="'Comic Sans MS','Trebuchet MS',sans-serif" font-size="17"  fill="#536f61"><tspan x="806" dy="0">Challenge claims and</tspan><tspan x="806" dy="21.76">approve exact writing</tspan></text>
+<text x="806" y="530" font-family="'Comic Sans MS','Trebuchet MS',sans-serif" font-size="15"  fill="#52755d"><tspan x="806" dy="0">GitHub Issues + PRs</tspan></text>
+<path d="M355 253 L355 373 L222 373 L222 420" fill="none" stroke="#6b9470" stroke-width="3"  stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<path d="M560 319 L560 420" fill="none" stroke="#6b9470" stroke-width="3"  stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<path d="M924 319 L924 391 L225 391 L225 420" fill="none" stroke="#6b9470" stroke-width="3" stroke-dasharray="8 7" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<path d="M383 487 L430 487" fill="none" stroke="#6b9470" stroke-width="3"  stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<path d="M745 487 L788 487" fill="none" stroke="#6b9470" stroke-width="3"  stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<path d="M594 555 L594 612 L219 612 L219 555" fill="none" stroke="#6b9470" stroke-width="3" stroke-dasharray="8 7" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<text x="290" y="588" font-family="'Comic Sans MS','Trebuchet MS',sans-serif" font-size="15"  fill="#536f61"><tspan x="290" dy="0">Source gaps → revisit</tspan></text>
+<text x="45" y="717" font-family="'Comic Sans MS','Trebuchet MS',sans-serif" font-size="18" font-weight="bold" fill="#173d35"><tspan x="45" dy="0">PUBLICATION BOUNDARY — explicit owner approval</tspan></text>
+<rect x="45" y="741" width="460" height="149" rx="18" fill="#fff8e7" stroke="#c9ab75" stroke-width="2.4"/>
+<text x="65" y="783" font-family="'Comic Sans MS','Trebuchet MS',sans-serif" font-size="23" font-weight="bold" fill="#173d35"><tspan x="65" dy="0">Owner approves public release</tspan></text>
+<text x="65" y="823" font-family="'Comic Sans MS','Trebuchet MS',sans-serif" font-size="17"  fill="#536f61"><tspan x="65" dy="0">Private merge ≠ permission to publish</tspan></text>
+<rect x="555" y="742" width="330" height="134" rx="18" fill="#eef6ee" stroke="#6b9470" stroke-width="2.4"/>
+<text x="573" y="776" font-family="'Comic Sans MS','Trebuchet MS',sans-serif" font-size="22" font-weight="bold" fill="#173d35"><tspan x="573" dy="0">Public research journal</tspan></text>
+<text x="573" y="806" font-family="'Comic Sans MS','Trebuchet MS',sans-serif" font-size="17"  fill="#536f61"><tspan x="573" dy="0">Reviewed articles,</tspan><tspan x="573" dy="21.76">process and diagrams</tspan></text>
+<text x="573" y="852" font-family="'Comic Sans MS','Trebuchet MS',sans-serif" font-size="15"  fill="#52755d"><tspan x="573" dy="0">Astro · GitHub Pages</tspan></text>
+<rect x="936" y="742" width="306" height="134" rx="18" fill="#fff9ec" stroke="#6b9470" stroke-width="2.4"/>
+<text x="954" y="776" font-family="'Comic Sans MS','Trebuchet MS',sans-serif" font-size="22" font-weight="bold" fill="#173d35"><tspan x="954" dy="0">Distribution &amp; metrics</tspan></text>
+<text x="954" y="806" font-family="'Comic Sans MS','Trebuchet MS',sans-serif" font-size="17"  fill="#536f61"><tspan x="954" dy="0">X drafts reviewed;</tspan><tspan x="954" dy="21.76">consented site analytics</tspan></text>
+<text x="954" y="852" font-family="'Comic Sans MS','Trebuchet MS',sans-serif" font-size="15"  fill="#52755d"><tspan x="954" dy="0">GTM / GA4 · X manual</tspan></text>
+<path d="M947 554 L947 676 L272 676 L272 741" fill="none" stroke="#6b9470" stroke-width="3" stroke-dasharray="8 7" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<path d="M505 816 L555 816" fill="none" stroke="#6b9470" stroke-width="3"  stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<path d="M885 816 L936 816" fill="none" stroke="#6b9470" stroke-width="3"  stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<text x="50" y="928" font-family="'Comic Sans MS','Trebuchet MS',sans-serif" font-size="17"  fill="#536f61"><tspan x="50" dy="0">Solid arrows: working flow   ·   Dashed arrows: review or manual movement</tspan></text></svg>
