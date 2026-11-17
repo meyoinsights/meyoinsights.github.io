@@ -3,3 +3,5 @@ dist/
 .astro/
 .env
 .env.*
+# PDFs are built from approved public Markdown during CI/deploy
+/public/reports/*.pdf
