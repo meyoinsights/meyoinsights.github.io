@@ -60,3 +60,11 @@ Preflight the resulting **actual PDF**, not just the Astro build. Inspect cover,
 ## Supplied editorial production guide
 
 Read [the adapted print guide](../../../docs/PRINT_DESIGN_GUIDE_ADAPTATION.md). Apply its typography, hierarchy, print-colour consistency, meaningful charts and preflight practices while retaining Meyo's original branding. For browser-to-PDF parity use `print-color-adjust: exact` plus the export engine's print-background setting. The current generator uses WeasyPrint, so do not claim browser flags are enabled unless its engine actually changes.
+
+## Research titles and display typography — approved direction
+
+**Publication title standard:** A research cover and document title must **identify its subject and use an active investigative angle**. The subject can be an issuer, industry, market, event or investing idea. For listed-company reports, include the ticker in the cover identity and preferably lead the headline with the company/ticker. Examples of framing (not fixed copy): `KPC: Testing the Investment Case`, `Kenya's Petroleum Industry: Mapping the Margins`, `Equity Bank: Examining Returns on Capital`. Avoid vague standalone aphorisms such as `An essential network. A harder valuation.` as the main publication title; they may appear as supporting standfirsts if useful. Headline assertions must match the evidence.
+
+**Display typography:** The initial delicate editorial serif was difficult to read at smaller phone zoom levels. Use a **substantial, high-contrast sans-serif** (Inter ExtraBold/800 or an equivalent open-source strong sans) for the cover headline and primary section headlines. Set tight but not cramped tracking, line-height around 1.02–1.10, and keep important words clear. Preserve a readable serif (e.g. Source Serif 4 or Noto Serif) for body copy and long-form quotations. Run a legibility check on Android and rendered A4 pages. The font pair is deliberate: strong sans for hierarchy, serif for reading. Don't introduce decorative thin or hairline display fonts as defaults.
+
+**Design proof:** `Meyo_Insights_KPC_Editorial_Style_Sample_v3.pdf` is an **unapproved sample**, not public research. Do not auto-publish it or replace approved research with excerpt copy.
