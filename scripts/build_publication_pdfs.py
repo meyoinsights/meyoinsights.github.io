@@ -38,6 +38,12 @@ def build_html(meta: dict, body: str):
     category = safe(meta.get("category", "COMPANY RESEARCH"))
     author = safe(meta["author"]).upper()
     date = safe(meta["pubDate"])
+    issue = safe(meta.get("issue", "—"))
+    exchange = safe(meta.get("exchange", ""))
+    ticker = safe(meta.get("ticker", ""))
+    research_as_of = safe(meta.get("researchAsOf", "Not specified"))
+    price_reference = safe(meta.get("marketReference", "Not specified"))
+    publication_status = safe(meta.get("publicationStatus", "Independent research"))
     text = MD.render(body)
     # Links are real embedded annotations; WeasyPrint resolves them from base_url.
     return f'''<!doctype html><html lang="en"><head><meta charset="utf-8"><title>{title}</title></head>
@@ -46,21 +52,21 @@ def build_html(meta: dict, body: str):
 <div class="cover-content">
 <div class="masthead">
 <div class="brand">MEYO <span>/</span> INSIGHTS</div>
-<div class="strapline">INDEPENDENT<br>INVESTMENT RESEARCH</div>
+<div class="strapline">INDEPENDENT<br>INVESTMENT RESEARCH<br>ISSUE {issue}</div>
 </div>
-<div class="category">{category}</div>
+<div class="category">{category} {" / " + exchange + ": " + ticker if exchange and ticker else ""}</div>
 <h1>{title}</h1>
 <p class="deck">{description}</p>
 <div class="accent-rule"></div>
-<div class="status">RESEARCH &amp; EDUCATION · READ SOURCES AND LIMITATIONS</div>
+<div class="status">{publication_status}<br>Research cut-off: {research_as_of}<br>Price reference: {price_reference}<br>Read Notes and References before relying on the analysis.</div>
 </div>
 <div class="monogram">MI</div>
 <div class="cover-foot">
 <div class="author">BY {author}</div>
-<div class="date">{date}<br>Meyo Insights · Research journal</div>
+<div class="date">PUBLISHED {date}<br>Meyo Insights · Issue {issue}</div>
 </div>
 </section>
-<main class="report"><div class="kicker">MEYO INSIGHTS / RESEARCH REPORT</div>{text}</main>
+<main class="report"><div class="kicker">MEYO INSIGHTS / RESEARCH REPORT / ISSUE {issue}</div>{text}<p class="pdf-follow">Continue the research: <a href="https://x.com/meyo_insights">x.com/meyo_insights</a></p></main>
 </body></html>'''
 
 def generate(src: Path, target: Path, css: Path):
