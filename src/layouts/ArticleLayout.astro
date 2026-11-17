@@ -4,6 +4,8 @@ const {frontmatter} = Astro.props;
 const title = frontmatter.title ?? 'Research note';
 const description = frontmatter.description ?? 'Original research and investment learning.';
 const date = frontmatter.pubDate ? new Date(frontmatter.pubDate) : null;
+const slug = Astro.url.pathname.replace(/\/$/, '').split('/').filter(Boolean).at(-1);
+const pdfUrl = slug ? `/reports/${slug}.pdf` : null;
 ---
 <SiteLayout title={title} description={description}>
   <article class="article wrap">
@@ -13,7 +15,14 @@ const date = frontmatter.pubDate ? new Date(frontmatter.pubDate) : null;
     <p class="article-deck">{description}</p>
     {frontmatter.author && <p class="muted">By {frontmatter.author}</p>}
     {date && !Number.isNaN(+date) && <p class="muted">Published {date.toLocaleDateString('en-KE', {year: 'numeric',month: 'long',day: 'numeric'})}</p>}
+    {pdfUrl && <p class="download-publication"><a href={pdfUrl} download type="application/pdf">Download the formatted research PDF (A4) ↓</a></p>}
     <div class="prose"><slot /></div>
     <p class="disclaimer">This journal is for research and education, not personalized investment advice. Read the sources and limitations before relying on a conclusion.</p>
   </article>
 </SiteLayout>
+
+<style>
+.download-publication { margin: 28px 0 30px; }
+.download-publication a { display: inline-block; border: 1px solid #b9cbb9; background:#eef4eb; color:#173d35; border-radius:6px; padding:12px 17px; font:700 13px/1.5 Inter,sans-serif; text-decoration:none; }
+.download-publication a:hover { background:#dfece0; }
+</style>
