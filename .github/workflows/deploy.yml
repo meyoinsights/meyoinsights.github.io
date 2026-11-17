@@ -25,6 +25,8 @@ jobs:
         with:
           python-version: '3.12'
       - run: python -m pip install -r requirements-pdf.txt
+      - name: Install open-source editorial fonts
+        run: sudo apt-get update -qq && sudo apt-get install -y -qq fonts-inter fonts-noto-core && fc-cache -f
       - run: python scripts/build_publication_pdfs.py
       - run: npm run build
       - uses: actions/configure-pages@v5
