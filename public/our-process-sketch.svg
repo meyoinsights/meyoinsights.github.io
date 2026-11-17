@@ -80,7 +80,7 @@
 <text x="426" y="902" font-family="'Comic Sans MS','Trebuchet MS',sans-serif" font-size="15"  fill="#526c60"><tspan x="426" dy="0">APPROVED</tspan></text>
 <path d="M578 997 L666 997" fill="none" stroke="#648871" stroke-width="2.7" stroke-linecap="round" stroke-linejoin="round"  marker-end="url(#head)"/>
 <path d="M968 997 L1058 997" fill="none" stroke="#648871" stroke-width="2.7" stroke-linecap="round" stroke-linejoin="round"  marker-end="url(#head)"/>
-<path d="M1403 1002 L1450 1002 L1450 330 L1390 330 L1390 260" fill="none" stroke="#648871" stroke-width="2.7" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="9 8" marker-end="url(#head)"/>
+<path d="M1403 1002 L1460 1002 L1460 132 L420 132 L420 185" fill="none" stroke="#648871" stroke-width="2.7" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="9 8" marker-end="url(#head)"/>
 <text x="1458" y="318" font-family="'Comic Sans MS','Trebuchet MS',sans-serif" font-size="15"  fill="#526c60"><tspan x="1458" dy="0">FEEDBACK</tspan></text>
 <path d="M241 1151 L1481 1149 Q1495 1151 1493 1163 L1495 1196 Q1494 1211 1481 1209 L241 1210 Q226 1208 229 1196 L227 1163 Q228 1148 241 1151Z" stroke="#b8cbb8" stroke-width="2.2" fill="#f2f5ec" stroke-linejoin="round"/>
-<text x="270" y="1183" font-family="'Comic Sans MS','Trebuchet MS',sans-serif" font-size="19" font-weight="700" fill="#173d35"><tspan x="270" dy="0">COLLECTED ≠ VERIFIED       •       DRAFTED ≠ PUBLISHED       •       PUBLICATION REQUIRES OWNER APPROVAL</tspan></text></svg>
+<text x="270" y="1183" font-family="'Comic Sans MS','Trebuchet MS',sans-serif" font-size="19" font-weight="700" fill="#173d35"><tspan x="270" dy="0">COLLECTED ≠ VERIFIED       •       DRAFTED ≠ PUBLISHED       •       PUBLICATION REQUIRES OWNER APPROVAL</tspan></text><path d="M1243 532 L1243 640 L420 640 L420 696" fill="none" stroke="#648871" stroke-width="2.7" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#head)"/></svg>
