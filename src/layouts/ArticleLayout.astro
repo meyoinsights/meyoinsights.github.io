@@ -6,17 +6,23 @@ const description = frontmatter.description ?? 'Original research and investment
 const date = frontmatter.pubDate ? new Date(frontmatter.pubDate) : null;
 const slug = Astro.url.pathname.replace(/\/$/, '').split('/').filter(Boolean).at(-1);
 const pdfUrl = slug ? `/reports/${slug}.pdf` : null;
+const issue = frontmatter.issue;
+const researchAsOf = frontmatter.researchAsOf;
+const marketReference = frontmatter.marketReference;
+const publicationStatus = frontmatter.publicationStatus;
 ---
 <SiteLayout title={title} description={description}>
   <article class="article wrap">
     <a class="eyebrow" href="/blog/">← Back to research</a>
-    <p class="eyebrow">{frontmatter.category ?? 'RESEARCH JOURNAL'}</p>
+    <p class="eyebrow">{frontmatter.category ?? 'RESEARCH JOURNAL'}{issue ? ` / ISSUE ${issue}` : ''}{frontmatter.exchange && frontmatter.ticker ? ` / ${frontmatter.exchange}: ${frontmatter.ticker}` : ''}</p>
     <h1>{title}</h1>
     <p class="article-deck">{description}</p>
     {frontmatter.author && <p class="muted">By {frontmatter.author}</p>}
     {date && !Number.isNaN(+date) && <p class="muted">Published {date.toLocaleDateString('en-KE', {year: 'numeric',month: 'long',day: 'numeric'})}</p>}
+    {(researchAsOf || marketReference || publicationStatus) && <div class="publication-meta">{researchAsOf && <span><strong>Research cut-off</strong> {researchAsOf}</span>}{marketReference && <span><strong>Price reference</strong> {marketReference}</span>}{publicationStatus && <span><strong>Status</strong> {publicationStatus}</span>}</div>}
     {pdfUrl && <p class="download-publication"><a href={pdfUrl} download type="application/pdf">Download the formatted research PDF (A4) ↓</a></p>}
     <div class="prose"><slot /></div>
+    <aside class="article-follow" aria-label="Follow Meyo Insights"><p class="eyebrow">Continue the conversation</p><h2>Follow the research, not just the headlines.</h2><p>For more company studies, industry research and ideas about investing better, follow Meyo Insights on X.</p><a class="button" href="https://x.com/meyo_insights" target="_blank" rel="noopener noreferrer">Follow @meyo_insights ↗</a></aside>
     <p class="disclaimer">This journal is for research and education, not personalized investment advice. Read the sources and limitations before relying on a conclusion.</p>
   </article>
 </SiteLayout>
