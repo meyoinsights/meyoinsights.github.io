@@ -15,4 +15,5 @@ jobs:
           cache: npm
           cache-dependency-path: package-lock.json
       - run: npm ci
+      - run: node --check public/analytics-consent.js
       - run: npm run build
