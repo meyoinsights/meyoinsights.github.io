@@ -1,16 +1,74 @@
 ---
 layout: ../../layouts/ArticleLayout.astro
 title: "Kenya Pipeline Company: Is the Share Price Justified?"
-description: "A full independent assessment of Kenya Pipeline's business, financial accounts, cash flow, valuation and long-term risks."
-pubDate: 2026-11-18
-category: Company research
+description: "An independent assessment of the business, accounts, cash flows and price of Kenya Pipeline Company."
 author: widdzz
-issue: "001"
-ticker: KPC
+pubDate: 2026-11-18
+issue: '001'
 exchange: NSE
+ticker: KPC
 researchAsOf: "14 November 2026"
 marketReference: "KES 10.70 · 13 November 2026"
 publicationStatus: "Independent analysis · provisional valuation"
+editorial:
+  issuer: Kenya Pipeline Company PLC
+  displayTitle: "KPC: Testing the investment case."
+  coverDeck: "KPC's pipelines matter to regional trade. But reported profits, accounting changes and a demanding capital plan complicate the investment case."
+  brief:
+    headline: "A valuable network does not automatically make a cheap share."
+    intro: "Kenya Pipeline Company transports and stores refined fuel across a network that is expensive to reproduce. The harder investment question is how much cash will reach ordinary shareholders after upkeep, new projects and other obligations."
+    verdict: "WATCH — NOT A PROVEN BARGAIN. Valuation scenarios are provisional."
+  takeaways:
+    - title: "The network is difficult to replicate"
+      detail: "Physical scale is an advantage, but regulated tariffs limit how much shareholders can capture."
+      sources: "[S01][S06]"
+    - title: "The FY2025 profit bases disagree"
+      detail: "The IPO compilation and the newer comparative report different group profits; a reconciliation is still required."
+      sources: "[S01][S03]"
+    - title: "Cash flow is not yet distributable cash"
+      detail: "Planned capital expenditure and debt financing may absorb future cash; a strong year is not a dividend forecast."
+      sources: "[S01]"
+    - title: "The base scenarios are below the price"
+      detail: "The five- and ten-year estimates are conditional, not verified fair values or a trading recommendation."
+      sources: "[S01][S03][S05]"
+  exhibits:
+    - kind: pipeline
+      beforeHeading: "What KPC does and how it makes money"
+      title: "A pipeline is a toll road for fuel."
+      subtitle: "Throughput and regulated route charges drive revenue; power, maintenance and capital investment determine the economics."
+      source: "KPC IPO information memorandum [S01]; EPRA tariff disclosures [S06]"
+      caveat: "An explanatory illustration, not an as-built engineering map or accounting identity."
+    - kind: bar
+      beforeHeading: "Five-year historical results (FY2021–FY2025)"
+      title: "Revenue rose. Comparability takes work."
+      subtitle: "Reported revenue, KES billions, FY2021–FY2025. Do not treat the series as like-for-like organic growth."
+      source: "KPC IPO selected historical financial information [S01]"
+      caveat: "KPRL entered the group during the period. Reporting basis and adjustment notes must be read with the chart."
+      data:
+        - {label: FY21, value: 27.99}
+        - {label: FY22, value: 26.21}
+        - {label: FY23, value: 30.86}
+        - {label: FY24, value: 35.37}
+        - {label: FY25, value: 38.59}
+    - kind: compare
+      beforeHeading: "The FY2025 comparison problem"
+      title: "One financial year. Two profit figures."
+      subtitle: "KES billions, FY2025 group net profit, as presented in different reporting compilations."
+      source: "IPO reporting accountant compilation [S01]; FY2026 published comparative [S03]"
+      caveat: "Approximately KES 2.75bn difference remains unreconciled. These are not a like-for-like growth base."
+      data:
+        - {label: "IPO compiled group / FY2025", value: 7.49, unit: "KES BILLION"}
+        - {label: "FY2026 release / FY2025 comparative", value: 10.24, unit: "KES BILLION"}
+    - kind: valuation
+      beforeHeading: "Five-year and ten-year discounted valuations"
+      title: "A price is a fact. A value is a model."
+      subtitle: "Market capitalisation versus provisional base present-value estimates. KES billions."
+      source: "Dated market reference and model assumptions [S03][S05]"
+      caveat: "Five- and ten-year scenario outputs depend on unverified capex, financing and cash-flow assumptions; they are not firm price targets."
+      data:
+        - {label: "5Y BASE", value: 124.57}
+        - {label: "10Y BASE", value: 144.70}
+        - {label: "MARKET", value: 194.45, market: true}
 ---
 
 **Issue 001 · Independent company research · Research cut-off: 14 November 2026**
