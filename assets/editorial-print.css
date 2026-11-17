@@ -1,0 +1,196 @@
+/* Original Meyo Insights editorial report design.
+   Inspired by print-journal hierarchy, not a reproduction of any publication. */
+@page {
+  size: A4;
+  margin: 17mm 17mm 19mm;
+  @bottom-left {
+    content: "MEYO INSIGHTS  /  RESEARCH JOURNAL";
+    color: #738078; font: 500 7pt sans-serif; letter-spacing: .8pt;
+  }
+  @bottom-right { content: counter(page); color: #173d35; font: bold 9pt sans-serif; }
+}
+@page cover {
+  margin: 0;
+  @bottom-left { content: none; }
+  @bottom-right { content: none; }
+}
+:root {
+  --forest: #173d35;
+  --moss: #668b75;
+  --ink: #192c28;
+  --cream: #f8f5ec;
+  --orange: #d96040;
+}
+html { color: var(--ink); font-family: "DejaVu Sans", sans-serif; }
+body { margin: 0; }
+.cover {
+  page: cover;
+  break-after: page;
+  width: 210mm;
+  height: 297mm;
+  overflow: hidden;
+  position: relative;
+  box-sizing: border-box;
+  background: var(--cream);
+  padding: 20mm 19mm 18mm;
+}
+.cover::before {
+  content: "";
+  position: absolute;
+  width: 210mm;
+  height: 13mm;
+  left: 0;
+  top: 0;
+  background: var(--forest);
+}
+.cover-content { position: relative; z-index: 1; }
+.masthead {
+  border-bottom: 1.4pt solid var(--forest);
+  padding-bottom: 9mm;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+.masthead .brand {
+  text-transform: uppercase;
+  font: 700 10pt "DejaVu Sans", sans-serif;
+  letter-spacing: 3.3pt;
+  margin: 4mm 0 0;
+}
+.masthead .brand span { color: #be6a43; }
+.masthead .strapline {
+  font: 700 8pt "DejaVu Sans", sans-serif;
+  letter-spacing: 1.8pt;
+  text-align: right;
+  color: #567464;
+}
+.cover .category {
+  margin-top: 31mm;
+  padding-top: 4mm;
+  color: var(--orange);
+  font: 700 10pt "DejaVu Sans", sans-serif;
+  letter-spacing: 2pt;
+  text-transform: uppercase;
+}
+.cover h1 {
+  font: bold 37pt/1.07 "DejaVu Serif", Georgia, serif;
+  letter-spacing: -1.5pt;
+  margin: 9mm 0;
+  color: #14372d;
+}
+.cover .deck {
+  font: 15pt/1.42 "DejaVu Serif", Georgia, serif;
+  margin: 0;
+  color: #345549;
+  max-width: 156mm;
+}
+.cover .accent-rule {
+  width: 23mm;
+  height: 2.6mm;
+  background: #e5b345;
+  margin-top: 12mm;
+}
+.cover .status {
+  background: #f0e2cb;
+  border-left: 3pt solid #c77453;
+  margin-top: 15mm;
+  padding: 4mm 5mm;
+  font: 700 9pt/1.5 "DejaVu Sans", sans-serif;
+  color: #6d3f34;
+}
+.cover .monogram {
+  font: bold 135pt/1 "DejaVu Sans", sans-serif;
+  color: #e7ebdf;
+  position: absolute;
+  bottom: 51mm;
+  right: -13mm;
+}
+.cover .cover-foot {
+  position: absolute;
+  bottom: 20mm;
+  left: 19mm;
+  right: 19mm;
+  border-top: 1.6pt solid #14372d;
+  padding-top: 6mm;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 6mm;
+}
+.cover .author { font: 700 10pt "DejaVu Sans", sans-serif; }
+.cover .date {
+  font: 8.5pt/1.6 "DejaVu Sans", sans-serif;
+  text-align: right;
+}
+.report {
+  font: 9.6pt/1.52 "DejaVu Serif", Georgia, serif;
+}
+.report .kicker {
+  color: #557768;
+  font: 700 8pt sans-serif;
+  letter-spacing: 2pt;
+  text-transform: uppercase;
+  margin-bottom: 6mm;
+}
+.report p { margin: 0 0 4mm; orphans: 3; widows: 3; }
+.report h2 {
+  font: 700 21pt/1.18 "DejaVu Sans", sans-serif;
+  letter-spacing: -.6pt;
+  margin: 12mm 0 4mm;
+  padding-top: 4mm;
+  border-top: 1.5pt solid #213f34;
+  color: var(--forest);
+  break-after: avoid;
+}
+.report h2:first-of-type { margin-top: 3mm; }
+.report h3 {
+  font: 700 12pt/1.3 "DejaVu Sans", sans-serif;
+  margin: 6mm 0 3mm;
+  color: #263e35;
+  break-after: avoid;
+}
+.report ul, .report ol { margin: 2mm 0 5mm; padding-left: 6mm; }
+.report li { margin-bottom: 2mm; }
+.report blockquote {
+  border-left: 3.5pt solid #dfb04b;
+  background: #f8f5ec;
+  margin: 6mm 0;
+  padding: 3mm 6mm;
+  font: italic 12pt/1.5 "DejaVu Serif", Georgia, serif;
+  color: #294e3e;
+}
+.report blockquote p { margin: 0; }
+.report table {
+  width: 100%;
+  border-collapse: collapse;
+  font: 8.1pt/1.28 "DejaVu Sans", sans-serif;
+  margin: 4mm 0 6mm;
+  table-layout: auto;
+}
+.report thead { display: table-header-group; }
+.report th, .report td {
+  border-bottom: .7pt solid #cfd9d0;
+  padding: 2.2mm 1.7mm;
+  vertical-align: top;
+  overflow-wrap: anywhere;
+}
+.report th {
+  background: #eaf0e9;
+  font-weight: 700;
+  color: #183d32;
+  border-top: 1.5pt solid #648871;
+}
+.report tbody tr:nth-child(even) { background: #f7f8f4; }
+.report tr { break-inside: avoid; }
+.report hr { border: 0; border-top: 1pt solid #bacbbb; margin: 7mm 0; }
+.report a { color: #2d715a; text-decoration: underline; }
+.report code { font: 8pt monospace; background: #f5f5f0; padding: 0 2pt; }
+.report pre { padding: 4mm; background: #f0f1ed; white-space: pre-wrap; overflow-wrap: anywhere; }
+
+/* Preserve editorial colour when the HTML is printed through a browser. */
+@media print {
+  html, body, .cover, .cover *, .report, .report *, .masthead, .status {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+}

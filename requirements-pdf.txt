@@ -1,0 +1,4 @@
+WeasyPrint==68.0
+markdown-it-py==4.2.0
+PyYAML>=6.0,<7
+pypdf>=5.0,<7
