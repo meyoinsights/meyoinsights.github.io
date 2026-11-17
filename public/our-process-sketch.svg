@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1550" height="1250" viewBox="0 0 1550 1250" role="img" aria-labelledby="ttl dsc"><title id="ttl">Meyo Insights research workflow</title><desc id="dsc">Four swimlanes: discover, research, editorial, publish. Automated collection assists human source verification, analysis, review and explicit publication approval. Revision and feedback loops return to earlier stages.</desc><defs><marker id="head" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M1 1 L9 5 L1 9" fill="none" stroke="#648871" stroke-width="1.8"/></marker></defs><path d="M9 2 L1540 0 Q1549 2 1547 9 L1549 1240 Q1548 1250 1540 1248 L9 1249 Q-1 1247 2 1240 L0 9 Q1 -1 9 2Z" stroke="#e0e4d9" stroke-width="2.2" fill="#fffdf8" stroke-linejoin="round"/>
+<text x="55" y="71" font-family="'Comic Sans MS','Trebuchet MS',sans-serif" font-size="36" font-weight="700" fill="#173d35"><tspan x="55" dy="0">MEYO INSIGHTS  /  OUR RESEARCH WORKFLOW</tspan></text>
+<text x="55" y="106" font-family="'Comic Sans MS','Trebuchet MS',sans-serif" font-size="19"  fill="#526c60"><tspan x="55" dy="0">An iterative process. Automation helps; evidence and publication decisions stay human.</tspan></text>
+<path d="M48 141 L1504 139 Q1521 141 1519 156 L1521 329 Q1520 347 1504 345 L48 346 Q30 344 33 329 L31 156 Q32 138 48 141Z" stroke="#cddbcf" stroke-width="2.2" fill="#fcfdf9" stroke-linejoin="round"/>
+<path d="M58 159 L200 157 Q215 159 213 172 L215 313 Q214 329 200 327 L58 328 Q42 326 45 313 L43 172 Q44 156 58 159Z" stroke="#b2c5b6" stroke-width="2.2" fill="#edf3e8" stroke-linejoin="round"/>
+<text x="58" y="192" font-family="'Comic Sans MS','Trebuchet MS',sans-serif" font-size="22" font-weight="700" fill="#173d35"><tspan x="58" dy="0">DISCOVER</tspan></text>
+<text x="58" y="232" font-family="'Comic Sans MS','Trebuchet MS',sans-serif" font-size="16"  fill="#526c60"><tspan x="58" dy="0">Find &amp; filter</tspan><tspan x="58" dy="20.48">ideas</tspan></text>
+<path d="M48 370 L1504 368 Q1521 370 1519 385 L1521 616 Q1520 634 1504 632 L48 633 Q30 631 33 616 L31 385 Q32 367 48 370Z" stroke="#cddbcf" stroke-width="2.2" fill="#fcfdf9" stroke-linejoin="round"/>
+<path d="M58 388 L200 386 Q215 388 213 401 L215 600 Q214 616 200 614 L58 615 Q42 613 45 600 L43 401 Q44 385 58 388Z" stroke="#b2c5b6" stroke-width="2.2" fill="#edf3e8" stroke-linejoin="round"/>
+<text x="58" y="421" font-family="'Comic Sans MS','Trebuchet MS',sans-serif" font-size="22" font-weight="700" fill="#173d35"><tspan x="58" dy="0">RESEARCH</tspan></text>
+<text x="58" y="461" font-family="'Comic Sans MS','Trebuchet MS',sans-serif" font-size="16"  fill="#526c60"><tspan x="58" dy="0">Collect, check</tspan><tspan x="58" dy="20.48">&amp; understand</tspan></text>
+<path d="M48 654 L1504 652 Q1521 654 1519 669 L1521 861 Q1520 879 1504 877 L48 878 Q30 876 33 861 L31 669 Q32 651 48 654Z" stroke="#cddbcf" stroke-width="2.2" fill="#fcfdf9" stroke-linejoin="round"/>
+<path d="M58 672 L200 670 Q215 672 213 685 L215 845 Q214 861 200 859 L58 860 Q42 858 45 845 L43 685 Q44 669 58 672Z" stroke="#b2c5b6" stroke-width="2.2" fill="#edf3e8" stroke-linejoin="round"/>
+<text x="58" y="705" font-family="'Comic Sans MS','Trebuchet MS',sans-serif" font-size="22" font-weight="700" fill="#173d35"><tspan x="58" dy="0">EDITORIAL</tspan></text>
+<text x="58" y="745" font-family="'Comic Sans MS','Trebuchet MS',sans-serif" font-size="16"  fill="#526c60"><tspan x="58" dy="0">Write, challenge</tspan><tspan x="58" dy="20.48">&amp; revise</tspan></text>
+<path d="M48 899 L1504 897 Q1521 899 1519 914 L1521 1107 Q1520 1125 1504 1123 L48 1124 Q30 1122 33 1107 L31 914 Q32 896 48 899Z" stroke="#cddbcf" stroke-width="2.2" fill="#fcfdf9" stroke-linejoin="round"/>
+<path d="M58 917 L200 915 Q215 917 213 930 L215 1091 Q214 1107 200 1105 L58 1106 Q42 1104 45 1091 L43 930 Q44 914 58 917Z" stroke="#b2c5b6" stroke-width="2.2" fill="#edf3e8" stroke-linejoin="round"/>
+<text x="58" y="950" font-family="'Comic Sans MS','Trebuchet MS',sans-serif" font-size="22" font-weight="700" fill="#173d35"><tspan x="58" dy="0">PUBLISH</tspan></text>
+<text x="58" y="990" font-family="'Comic Sans MS','Trebuchet MS',sans-serif" font-size="16"  fill="#526c60"><tspan x="58" dy="0">Approve, share</tspan><tspan x="58" dy="20.48">&amp; learn</tspan></text>
+<path d="M274 186 L563 184 Q582 186 580 203 L582 277 Q581 297 563 295 L274 296 Q254 294 257 277 L255 203 Q256 183 274 186Z" stroke="#648871" stroke-width="2.2" fill="#edf5ed" stroke-linejoin="round"/>
+<text x="277" y="219" font-family="'Comic Sans MS','Trebuchet MS',sans-serif" font-size="24" font-weight="700" fill="#173d35"><tspan x="277" dy="0">Ideas &amp; inputs</tspan></text>
+<text x="277" y="251" font-family="'Comic Sans MS','Trebuchet MS',sans-serif" font-size="17"  fill="#526c60"><tspan x="277" dy="0">RSS, reports, filings,</tspan><tspan x="277" dy="21.76">watchlists and chat</tspan></text>
+<text x="277" y="280" font-family="'Comic Sans MS','Trebuchet MS',sans-serif" font-size="12" font-weight="700" fill="#52795b"><tspan x="277" dy="0">AUTOMATED / ASSISTED</tspan></text>
+<path d="M759.5 178 Q762.5 179 857 243 L759.5 308 L662 243Z" fill="#f6e8d4" stroke="#977b58" stroke-width="2.4" stroke-linejoin="round"/>
+<text x="715" y="232" font-family="'Comic Sans MS','Trebuchet MS',sans-serif" font-size="22" font-weight="700" fill="#173d35"><tspan x="715" dy="0">Worth</tspan></text>
+<text x="693" y="263" font-family="'Comic Sans MS','Trebuchet MS',sans-serif" font-size="21" font-weight="700" fill="#173d35"><tspan x="693" dy="0">pursuing?</tspan></text>
+<path d="M1052 186 L1341 184 Q1360 186 1358 203 L1360 277 Q1359 297 1341 295 L1052 296 Q1032 294 1035 277 L1033 203 Q1034 183 1052 186Z" stroke="#648871" stroke-width="2.2" fill="#fffefb" stroke-linejoin="round"/>
+<text x="1055" y="219" font-family="'Comic Sans MS','Trebuchet MS',sans-serif" font-size="24" font-weight="700" fill="#173d35"><tspan x="1055" dy="0">Park / discard</tspan></text>
+<text x="1055" y="251" font-family="'Comic Sans MS','Trebuchet MS',sans-serif" font-size="17"  fill="#526c60"><tspan x="1055" dy="0">Save for later or decline</tspan></text>
+<text x="1055" y="280" font-family="'Comic Sans MS','Trebuchet MS',sans-serif" font-size="12" font-weight="700" fill="#815a3b"><tspan x="1055" dy="0">HUMAN DECISION</tspan></text>
+<path d="M581 240 L662 240" fill="none" stroke="#648871" stroke-width="2.7" stroke-linecap="round" stroke-linejoin="round"  marker-end="url(#head)"/>
+<path d="M857 238 L1034 238" fill="none" stroke="#648871" stroke-width="2.7" stroke-linecap="round" stroke-linejoin="round"  marker-end="url(#head)"/>
+<text x="1042" y="226" font-family="'Comic Sans MS','Trebuchet MS',sans-serif" font-size="15"  fill="#526c60"><tspan x="1042" dy="0">NO</tspan></text>
+<path d="M760 308 L760 347 L420 347 L420 415" fill="none" stroke="#648871" stroke-width="2.7" stroke-linecap="round" stroke-linejoin="round"  marker-end="url(#head)"/>
+<text x="428" y="335" font-family="'Comic Sans MS','Trebuchet MS',sans-serif" font-size="15"  fill="#526c60"><tspan x="428" dy="0">YES</tspan></text>
+<path d="M274 423 L553 421 Q572 423 570 440 L572 514 Q571 534 553 532 L274 533 Q254 531 257 514 L255 440 Q256 420 274 423Z" stroke="#648871" stroke-width="2.2" fill="#edf5ed" stroke-linejoin="round"/>
+<text x="277" y="456" font-family="'Comic Sans MS','Trebuchet MS',sans-serif" font-size="24" font-weight="700" fill="#173d35"><tspan x="277" dy="0">Collect sources</tspan></text>
+<text x="277" y="488" font-family="'Comic Sans MS','Trebuchet MS',sans-serif" font-size="17"  fill="#526c60"><tspan x="277" dy="0">Links, PDFs, primary</tspan><tspan x="277" dy="21.76">records and context</tspan></text>
+<text x="277" y="517" font-family="'Comic Sans MS','Trebuchet MS',sans-serif" font-size="12" font-weight="700" fill="#52795b"><tspan x="277" dy="0">AUTOMATED / ASSISTED</tspan></text>
+<path d="M692 423 L971 421 Q990 423 988 440 L990 514 Q989 534 971 532 L692 533 Q672 531 675 514 L673 440 Q674 420 692 423Z" stroke="#648871" stroke-width="2.2" fill="#edf5ed" stroke-linejoin="round"/>
+<text x="695" y="456" font-family="'Comic Sans MS','Trebuchet MS',sans-serif" font-size="24" font-weight="700" fill="#173d35"><tspan x="695" dy="0">Verify evidence</tspan></text>
+<text x="695" y="488" font-family="'Comic Sans MS','Trebuchet MS',sans-serif" font-size="17"  fill="#526c60"><tspan x="695" dy="0">Check sources, figures</tspan><tspan x="695" dy="21.76">and missing information</tspan></text>
+<text x="695" y="517" font-family="'Comic Sans MS','Trebuchet MS',sans-serif" font-size="12" font-weight="700" fill="#52795b"><tspan x="695" dy="0">HUMAN-LED</tspan></text>
+<path d="M1099 423 L1387 421 Q1406 423 1404 440 L1406 514 Q1405 534 1387 532 L1099 533 Q1079 531 1082 514 L1080 440 Q1081 420 1099 423Z" stroke="#648871" stroke-width="2.2" fill="#edf5ed" stroke-linejoin="round"/>
+<text x="1102" y="456" font-family="'Comic Sans MS','Trebuchet MS',sans-serif" font-size="24" font-weight="700" fill="#173d35"><tspan x="1102" dy="0">Analyze</tspan></text>
+<text x="1102" y="488" font-family="'Comic Sans MS','Trebuchet MS',sans-serif" font-size="17"  fill="#526c60"><tspan x="1102" dy="0">Economics, financials,</tspan><tspan x="1102" dy="21.76">value, risks and cycles</tspan></text>
+<text x="1102" y="517" font-family="'Comic Sans MS','Trebuchet MS',sans-serif" font-size="12" font-weight="700" fill="#52795b"><tspan x="1102" dy="0">HUMAN-LED</tspan></text>
+<path d="M571 478 L674 478" fill="none" stroke="#648871" stroke-width="2.7" stroke-linecap="round" stroke-linejoin="round"  marker-end="url(#head)"/>
+<path d="M989 478 L1081 478" fill="none" stroke="#648871" stroke-width="2.7" stroke-linecap="round" stroke-linejoin="round"  marker-end="url(#head)"/>
+<path d="M1242 532 L1242 604 L410 604 L410 532" fill="none" stroke="#648871" stroke-width="2.7" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="9 8" marker-end="url(#head)"/>
+<text x="418" y="592" font-family="'Comic Sans MS','Trebuchet MS',sans-serif" font-size="15"  fill="#526c60"><tspan x="418" dy="0">Conflicts → revisit sources</tspan></text>
+<path d="M274 697 L563 695 Q582 697 580 714 L582 788 Q581 808 563 806 L274 807 Q254 805 257 788 L255 714 Q256 694 274 697Z" stroke="#648871" stroke-width="2.2" fill="#edf5ed" stroke-linejoin="round"/>
+<text x="277" y="730" font-family="'Comic Sans MS','Trebuchet MS',sans-serif" font-size="24" font-weight="700" fill="#173d35"><tspan x="277" dy="0">Prepare draft</tspan></text>
+<text x="277" y="762" font-family="'Comic Sans MS','Trebuchet MS',sans-serif" font-size="17"  fill="#526c60"><tspan x="277" dy="0">Article, chart, diagram</tspan><tspan x="277" dy="21.76">and X draft</tspan></text>
+<text x="277" y="791" font-family="'Comic Sans MS','Trebuchet MS',sans-serif" font-size="12" font-weight="700" fill="#52795b"><tspan x="277" dy="0">AI-ASSISTED</tspan></text>
+<path d="M806.5 683 Q809.5 684 909 753.5 L806.5 824 L704 753.5Z" fill="#f6e8d4" stroke="#977b58" stroke-width="2.4" stroke-linejoin="round"/>
+<text x="764" y="744" font-family="'Comic Sans MS','Trebuchet MS',sans-serif" font-size="23" font-weight="700" fill="#173d35"><tspan x="764" dy="0">Owner</tspan></text>
+<text x="755" y="778" font-family="'Comic Sans MS','Trebuchet MS',sans-serif" font-size="23" font-weight="700" fill="#173d35"><tspan x="755" dy="0">review</tspan></text>
+<path d="M1106 697 L1373 695 Q1392 697 1390 714 L1392 788 Q1391 808 1373 806 L1106 807 Q1086 805 1089 788 L1087 714 Q1088 694 1106 697Z" stroke="#648871" stroke-width="2.2" fill="#fffefb" stroke-linejoin="round"/>
+<text x="1109" y="730" font-family="'Comic Sans MS','Trebuchet MS',sans-serif" font-size="24" font-weight="700" fill="#173d35"><tspan x="1109" dy="0">Revise / hold</tspan></text>
+<text x="1109" y="762" font-family="'Comic Sans MS','Trebuchet MS',sans-serif" font-size="17"  fill="#526c60"><tspan x="1109" dy="0">Edit, challenge or</tspan><tspan x="1109" dy="21.76">request more evidence</tspan></text>
+<text x="1109" y="791" font-family="'Comic Sans MS','Trebuchet MS',sans-serif" font-size="12" font-weight="700" fill="#815a3b"><tspan x="1109" dy="0">HUMAN DECISION</tspan></text>
+<path d="M581 750 L704 750" fill="none" stroke="#648871" stroke-width="2.7" stroke-linecap="round" stroke-linejoin="round"  marker-end="url(#head)"/>
+<path d="M909 750 L1088 750" fill="none" stroke="#648871" stroke-width="2.7" stroke-linecap="round" stroke-linejoin="round"  marker-end="url(#head)"/>
+<text x="1096" y="738" font-family="'Comic Sans MS','Trebuchet MS',sans-serif" font-size="15"  fill="#526c60"><tspan x="1096" dy="0">RETURN</tspan></text>
+<path d="M1238 806 L1238 847 L418 847 L418 806" fill="none" stroke="#648871" stroke-width="2.7" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="9 8" marker-end="url(#head)"/>
+<path d="M274 944 L560 942 Q579 944 577 961 L579 1035 Q578 1055 560 1053 L274 1054 Q254 1052 257 1035 L255 961 Q256 941 274 944Z" stroke="#648871" stroke-width="2.2" fill="#fffefb" stroke-linejoin="round"/>
+<text x="277" y="977" font-family="'Comic Sans MS','Trebuchet MS',sans-serif" font-size="24" font-weight="700" fill="#173d35"><tspan x="277" dy="0">Publication approval</tspan></text>
+<text x="277" y="1009" font-family="'Comic Sans MS','Trebuchet MS',sans-serif" font-size="17"  fill="#526c60"><tspan x="277" dy="0">Explicit owner sign-off</tspan></text>
+<text x="277" y="1038" font-family="'Comic Sans MS','Trebuchet MS',sans-serif" font-size="12" font-weight="700" fill="#815a3b"><tspan x="277" dy="0">HUMAN DECISION</tspan></text>
+<path d="M684 944 L950 942 Q969 944 967 961 L969 1035 Q968 1055 950 1053 L684 1054 Q664 1052 667 1035 L665 961 Q666 941 684 944Z" stroke="#648871" stroke-width="2.2" fill="#fffefb" stroke-linejoin="round"/>
+<text x="687" y="977" font-family="'Comic Sans MS','Trebuchet MS',sans-serif" font-size="24" font-weight="700" fill="#173d35"><tspan x="687" dy="0">Publish</tspan></text>
+<text x="687" y="1009" font-family="'Comic Sans MS','Trebuchet MS',sans-serif" font-size="17"  fill="#526c60"><tspan x="687" dy="0">Website and separately</tspan><tspan x="687" dy="21.76">approved X / newsletter</tspan></text>
+<text x="687" y="1038" font-family="'Comic Sans MS','Trebuchet MS',sans-serif" font-size="12" font-weight="700" fill="#815a3b"><tspan x="687" dy="0">HUMAN DECISION</tspan></text>
+<path d="M1076 944 L1385 942 Q1404 944 1402 961 L1404 1035 Q1403 1055 1385 1053 L1076 1054 Q1056 1052 1059 1035 L1057 961 Q1058 941 1076 944Z" stroke="#648871" stroke-width="2.2" fill="#fffefb" stroke-linejoin="round"/>
+<text x="1079" y="977" font-family="'Comic Sans MS','Trebuchet MS',sans-serif" font-size="24" font-weight="700" fill="#173d35"><tspan x="1079" dy="0">Learn &amp; correct</tspan></text>
+<text x="1079" y="1009" font-family="'Comic Sans MS','Trebuchet MS',sans-serif" font-size="17"  fill="#526c60"><tspan x="1079" dy="0">New evidence, corrections</tspan><tspan x="1079" dy="21.76">and future ideas</tspan></text>
+<text x="1079" y="1038" font-family="'Comic Sans MS','Trebuchet MS',sans-serif" font-size="12" font-weight="700" fill="#815a3b"><tspan x="1079" dy="0">HUMAN-LED</tspan></text>
+<path d="M807 824 L807 914 L418 914 L418 943" fill="none" stroke="#648871" stroke-width="2.7" stroke-linecap="round" stroke-linejoin="round"  marker-end="url(#head)"/>
+<text x="426" y="902" font-family="'Comic Sans MS','Trebuchet MS',sans-serif" font-size="15"  fill="#526c60"><tspan x="426" dy="0">APPROVED</tspan></text>
+<path d="M578 997 L666 997" fill="none" stroke="#648871" stroke-width="2.7" stroke-linecap="round" stroke-linejoin="round"  marker-end="url(#head)"/>
+<path d="M968 997 L1058 997" fill="none" stroke="#648871" stroke-width="2.7" stroke-linecap="round" stroke-linejoin="round"  marker-end="url(#head)"/>
+<path d="M1403 1002 L1450 1002 L1450 330 L1390 330 L1390 260" fill="none" stroke="#648871" stroke-width="2.7" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="9 8" marker-end="url(#head)"/>
+<text x="1458" y="318" font-family="'Comic Sans MS','Trebuchet MS',sans-serif" font-size="15"  fill="#526c60"><tspan x="1458" dy="0">FEEDBACK</tspan></text>
+<path d="M241 1151 L1481 1149 Q1495 1151 1493 1163 L1495 1196 Q1494 1211 1481 1209 L241 1210 Q226 1208 229 1196 L227 1163 Q228 1148 241 1151Z" stroke="#b8cbb8" stroke-width="2.2" fill="#f2f5ec" stroke-linejoin="round"/>
+<text x="270" y="1183" font-family="'Comic Sans MS','Trebuchet MS',sans-serif" font-size="19" font-weight="700" fill="#173d35"><tspan x="270" dy="0">COLLECTED ≠ VERIFIED       •       DRAFTED ≠ PUBLISHED       •       PUBLICATION REQUIRES OWNER APPROVAL</tspan></text></svg>
