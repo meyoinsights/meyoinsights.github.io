@@ -194,3 +194,18 @@ body { margin: 0; }
     print-color-adjust: exact;
   }
 }
+
+/* Issue 001 editorial design — typography, metadata and evidence hierarchy */
+:root { --cream:#f8f5ee; --ink:#162a23; --forest:#173d35; --orange:#c96b4a; }
+.cover{background:linear-gradient(135deg,#f8f5ee 70%,#e7ece2)}
+.cover::before{height:9mm}
+.cover .category{color:#a66e38;letter-spacing:1.45pt;margin-top:25mm}
+.cover h1{font-family:"DejaVu Serif",Georgia,serif;letter-spacing:-1.35pt;font-size:34pt;max-width:165mm}
+.cover .deck{font-size:13pt}
+.cover .status{background:#e9eee6;border-left-color:#d5a049;line-height:1.55;color:#244637;font-weight:500}
+.cover .monogram{color:#e0e9de;font-size:125pt;bottom:43mm}
+.report{color:#162a23;font-size:9.8pt;line-height:1.56}
+.report h2{border-top:1.5pt solid var(--forest);padding-top:4mm;color:var(--forest);font-size:19pt}
+.report h3{color:#264c3b}
+.report a{overflow-wrap:anywhere;color:#226249}
+.report .pdf-follow{border-top:1.4pt solid #173d35;margin-top:14mm;padding-top:5mm;color:#173d35;font:700 10pt "DejaVu Sans",sans-serif}
