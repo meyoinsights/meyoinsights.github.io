@@ -48,3 +48,11 @@ If the PDF generator, content parser or Astro build fails, CI fails. Do not publ
 - Add PDF preflight detection for overflow / extremely small table text.
 - Versioned reports with corrections, revision history and source-as-of date.
 - Optional downloadable summary sheet and linked data appendix once both are reviewed.
+
+## V2 art-direction gate (not yet fully implemented)
+
+Read [the editorial design system v2](../../../docs/EDITORIAL_DESIGN_SYSTEM_V2.md) before changing the visual template. Its six-page KPC design proof is a proposal, not a publication. The current automated v1 template must be reviewed against the v2 requirements **before** merge.
+
+For listed companies the agent must not proceed silently with a generic Markdown cover. Collect **exchange, ticker, dated market reference, issue number, report date, research-as-of date and evidence-backed key takeaways** from the approved publication metadata. Distinguish approved identity assets from proposed design marks. Build an executive brief before detailed analysis and charts that answer specific questions, each carrying source/basis and limitations. The agent may highlight a verified claim but may not rewrite its economic meaning, supply a missing number, or infer an owner verdict. If required metadata is missing, flag the publication for human completion rather than hiding the gap in a generic layout.
+
+Preflight the resulting **actual PDF**, not just the Astro build. Inspect cover, evidence spread, valuation visualization, tables and source pages individually at print size and on a mobile viewer. Record reviewer, date, approved research revision and a visual sign-off in the publishing PR.
