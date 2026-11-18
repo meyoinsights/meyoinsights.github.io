@@ -15,7 +15,8 @@ jobs:
           cache: npm
           cache-dependency-path: package-lock.json
       - run: npm ci
-      - run: node --check public/analytics-consent.js
+      - run: node --check public/analytics-consent.js && node --check public/publication-downloads.js && node --check public/article-reading.js
+      - run: node --test tests/*.test.mjs
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
