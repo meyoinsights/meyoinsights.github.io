@@ -11,7 +11,16 @@ exchange: NSE
 researchAsOf: "18 November 2026"
 marketReference: "KES 10.70 · 13 November 2026"
 publicationStatus: "Independent analysis · provisional valuation"
-revision: "1.1 · 18 November 2026"
+revision: "1.2 · 18 November 2026"
+version: "1.2"
+versionTimestamp: "2026-11-18T09:17:00+03:00"
+previousVersions:
+  - version: "1.1"
+    article: "/versions/kenya-pipeline-is-share-price-justified-v1-1/"
+    pdf: "/reports/versions/kenya-pipeline-is-share-price-justified-v1-1.pdf"
+  - version: "1.0"
+    article: "/versions/kenya-pipeline-is-share-price-justified-v1-0/"
+    pdf: "/reports/versions/kenya-pipeline-is-share-price-justified-v1-0.pdf"
 preflight:
   reviewedAt: "2026-11-18"
   lookbackStart: "2026-08-20"
@@ -609,9 +618,8 @@ The following items remain **unverified, incomplete or assumption-dependent** at
 [M05] **Business Daily Africa**, 16 November 2026, Greenview shareholding, NSSF board transition and the upcoming AGM: https://www.businessdailyafrica.com/bd/corporate/companies/dangote-replaces-nssf-in-kpc-boardroom-shake-up-5673252  
 [M06] **Business Radar**, 12 November 2026, independent quotation and image of the 11 November issuer AGM notice, including the 24.9% block and directorship: https://businessradar.co.ke/kpc-agm-2026/  
 
-### Editorial record and corrections
+## Change log
 
-- **18 November 2026, revision 1.1:** Added the previously omitted October KPC secondary-market stake transaction, Dangote's publicly reported announcement, Greenview Oil Trading Corp.'s 24.9% AGM-disclosed ownership and nomination rights, governance/related-party implications, and revised Notes and References. The omission was present at the first publication despite the events predating its source cut-off. **No DCF output, cash-flow assumption, or target price was changed.**
-- **18 November 2026, original publication:** Full v6.0 financial/industry research based on a 14 November evidence cut-off.
-
-This remains independent research, **not a new financial audit**. We will date and explain material corrections rather than overwrite conclusions without a changelog. Send evidence or corrections to [@meyo_insights](https://x.com/meyo_insights).
+- **v1.2 · 18 November 2026, 09:17 EAT** — Added timestamped edition history and permanent links to earlier articles and PDFs; research unchanged.
+- **v1.1 · 18 November 2026, 09:00 EAT** — Added the previously omitted Dangote/Greenview stake and governance analysis; valuation unchanged. [Article](/versions/kenya-pipeline-is-share-price-justified-v1-1/) · [PDF](/reports/versions/kenya-pipeline-is-share-price-justified-v1-1.pdf)
+- **v1.0 · 18 November 2026, 01:48 EAT** — Original nine-section KPC business, financial and valuation research published. [Article](/versions/kenya-pipeline-is-share-price-justified-v1-0/) · [PDF](/reports/versions/kenya-pipeline-is-share-price-justified-v1-0.pdf)
