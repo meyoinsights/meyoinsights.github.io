@@ -164,5 +164,38 @@ This must not publish.
         with self.assertRaisesRegex(ValueError, "M99"):
             publisher.validate_publication_preflight(altered, body)
 
+
+    def test_issue001_version_history_after_references(self):
+        current = ROOT / "src/pages/blog/kenya-pipeline-is-share-price-justified.md"
+        meta, body = publisher.parse_article(current)
+        self.assertEqual(meta["version"], "1.2")
+        self.assertIn("+03:00", meta["versionTimestamp"])
+        self.assertEqual([v["version"] for v in meta["previousVersions"]], ["1.1", "1.0"])
+        self.assertLess(body.index("## References"), body.index("## Change log"))
+        change_log = body.split("## Change log", 1)[1]
+        bullets = [line for line in change_log.splitlines() if line.startswith("- **v")]
+        self.assertEqual(len(bullets), 3)
+        self.assertIn("v1.2", bullets[0])
+        self.assertIn("v1.1", bullets[1])
+        self.assertIn("v1.0", bullets[2])
+        output = publisher.build_html(meta, body)
+        self.assertIn("VERSION 1.2", output)
+        self.assertIn("https://meyoinsights.github.io/versions/", output)
+        self.assertIn("https://meyoinsights.github.io/reports/versions/", output)
+
+    def test_prior_edition_snapshots_are_preserved(self):
+        root = ROOT / "src/pages/versions"
+        for version in ("1-0", "1-1"):
+            source = root / f"kenya-pipeline-is-share-price-justified-v{version}.md"
+            meta, body = publisher.parse_article(source)
+            self.assertTrue(meta["archived"])
+            self.assertEqual(meta["version"], version.replace("-", "."))
+            self.assertNotIn("## Change log", body)
+            self.assertIn("## References", body)
+            rendered = publisher.build_html(meta, body)
+            self.assertIn("ARCHIVED EDITION", rendered)
+        self.assertNotIn("Greenview Oil Trading", publisher.parse_article(root / "kenya-pipeline-is-share-price-justified-v1-0.md")[1])
+        self.assertIn("Greenview Oil Trading", publisher.parse_article(root / "kenya-pipeline-is-share-price-justified-v1-1.md")[1])
+
 if __name__ == "__main__":
     unittest.main()
