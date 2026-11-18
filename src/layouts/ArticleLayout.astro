@@ -5,7 +5,12 @@ const title = frontmatter.title ?? 'Research note';
 const description = frontmatter.description ?? 'Original research and investment learning.';
 const date = frontmatter.pubDate ? new Date(frontmatter.pubDate) : null;
 const slug = Astro.url.pathname.replace(/\/$/, '').split('/').filter(Boolean).at(-1);
-const pdfUrl = slug ? `/reports/${slug}.pdf` : null;
+const pdfUrl = frontmatter.pdfUrl ?? (slug ? `/reports/${slug}.pdf` : null);
+const archived = frontmatter.archived === true;
+const canonicalUrl = frontmatter.canonicalUrl ?? null;
+const version = frontmatter.version ?? null;
+const versionTimestamp = frontmatter.versionTimestamp ?? null;
+const previousVersions = frontmatter.previousVersions ?? [];
 const issue = frontmatter.issue;
 const researchAsOf = frontmatter.researchAsOf;
 const marketReference = frontmatter.marketReference;
@@ -13,13 +18,16 @@ const publicationStatus = frontmatter.publicationStatus;
 ---
 <SiteLayout title={title} description={description}>
   <article class="article wrap">
-    <a class="eyebrow" href="/blog/">← Back to research</a>
+    {archived ? <a class="eyebrow" href={canonicalUrl ?? '/blog/'}>← Latest edition</a> : <a class="eyebrow" href="/blog/">← Back to research</a>}
     <p class="eyebrow">{frontmatter.category ?? 'RESEARCH JOURNAL'}{issue ? ` / ISSUE ${issue}` : ''}{frontmatter.exchange && frontmatter.ticker ? ` / ${frontmatter.exchange}: ${frontmatter.ticker}` : ''}</p>
     <h1>{title}</h1>
     <p class="article-deck">{description}</p>
     {frontmatter.author && <p class="muted">By {frontmatter.author}</p>}
     {date && !Number.isNaN(+date) && <p class="muted">Published {date.toLocaleDateString('en-KE', {year: 'numeric',month: 'long',day: 'numeric'})}</p>}
+    {version && versionTimestamp && <p class="edition-stamp"><strong>{archived ? 'Archived' : 'Current'} version {version}</strong> · <time datetime={versionTimestamp}>{new Date(versionTimestamp).toLocaleString('en-KE', {timeZone:'Africa/Nairobi',year:'numeric',month:'short',day:'numeric',hour:'2-digit',minute:'2-digit',hour12:false})} EAT</time></p>}
+    {archived && canonicalUrl && <p class="archive-note">You are reading an earlier edition. <a href={canonicalUrl}>Read the latest published version</a>.</p>}
     {(researchAsOf || marketReference || publicationStatus) && <div class="publication-meta">{researchAsOf && <span><strong>Research cut-off</strong> {researchAsOf}</span>}{marketReference && <span><strong>Price reference</strong> {marketReference}</span>}{publicationStatus && <span><strong>Status</strong> {publicationStatus}</span>}</div>}
+    {!archived && previousVersions.length > 0 && <p class="prior-editions"><strong>Previous editions</strong> {previousVersions.map((v) => <span><a href={v.article}>v{v.version} article</a> · <a href={v.pdf}>PDF</a></span>)}</p>}
     {pdfUrl && <p class="download-publication"><a href={pdfUrl} download type="application/pdf">Download the formatted research PDF (A4) ↓</a></p>}
     <div class="prose"><slot /></div>
     <aside class="article-follow" aria-label="Follow Meyo Insights"><p class="eyebrow">Continue the conversation</p><h2>Follow the research, not just the headlines.</h2><p>For more company studies, industry research and ideas about investing better, follow Meyo Insights on X.</p><a class="button" href="https://x.com/meyo_insights" target="_blank" rel="noopener noreferrer">Follow @meyo_insights ↗</a></aside>
@@ -31,4 +39,8 @@ const publicationStatus = frontmatter.publicationStatus;
 .download-publication { margin: 28px 0 30px; }
 .download-publication a { display: inline-block; border: 1px solid #b9cbb9; background:#eef4eb; color:#173d35; border-radius:6px; padding:12px 17px; font:700 13px/1.5 Inter,sans-serif; text-decoration:none; }
 .download-publication a:hover { background:#dfece0; }
+.edition-stamp{margin:16px 0 6px;font:500 13px/1.6 Inter,sans-serif;color:#173d35}
+.archive-note{padding:12px 16px;background:#f0eee3;border-left:3px solid #173d35;font:500 13px/1.5 Inter,sans-serif}
+.prior-editions{display:flex;gap:14px;flex-wrap:wrap;align-items:center;font:500 12px/1.5 Inter,sans-serif;color:#3d574d}
+.prior-editions a{text-underline-offset:3px}
 </style>
