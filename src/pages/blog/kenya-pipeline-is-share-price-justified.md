@@ -8,17 +8,35 @@ author: widdzz
 issue: "001"
 ticker: KPC
 exchange: NSE
-researchAsOf: "14 November 2026"
+researchAsOf: "18 November 2026"
 marketReference: "KES 10.70 · 13 November 2026"
 publicationStatus: "Independent analysis · provisional valuation"
+revision: "1.1 · 18 November 2026"
+preflight:
+  reviewedAt: "2026-11-18"
+  lookbackStart: "2026-08-20"
+  reviewCategories:
+    ownership: ["M01", "M02", "M03", "M05"]
+    governance: ["M03", "M05"]
+    leadership: ["M03"]
+    corporate_actions: ["M01", "M03"]
+    strategic_transactions: ["M02", "M04"]
+    regulatory: ["S06", "S08"]
+    financials: ["S02", "S03"]
+  materialEvents:
+    - id: KPC-2026-10-19-BLOCK-TRADE
+      eventDate: "2026-10-19"
+      sourceIds: ["M01", "M02", "M03", "M05"]
+      disposition: "Disclosed; no speculative DCF uplift"
+  openVerification: "Greenview beneficial ownership and binding related-party commercial plans are not independently verified"
 
 editorial:
   issuer: Kenya Pipeline Company PLC
   displayTitle: "KPC: Testing the investment case."
   coverDeck: "KPC's pipelines matter to regional trade. But reported profits, accounting changes and a demanding capital plan complicate the investment case."
   brief:
-    headline: "A valuable network does not automatically make a cheap share."
-    intro: "Kenya Pipeline Company transports and stores refined fuel across a network that is expensive to reproduce. The harder investment question is how much cash will reach ordinary shareholders after upkeep, new projects and other obligations."
+    headline: "A valuable network. A new strategic shareholder. An uncertain price."
+    intro: "Kenya Pipeline moves essential fuel, but a recently reported 24.76% strategic acquisition and a disclosed 24.9% Greenview stake change the governance and distribution questions. Neither the ownership event nor refinery plans establish new distributable cash flow."
     verdict: "WATCH — NOT A PROVEN BARGAIN. Valuation scenarios are provisional."
   takeaways:
     - title: "The network is difficult to replicate"
@@ -27,9 +45,9 @@ editorial:
     - title: "The FY2025 profit bases disagree"
       detail: "The IPO compilation and the newer comparative report different group profits; a reconciliation is still required."
       sources: "[S01][S03]"
-    - title: "Cash flow is not yet distributable cash"
-      detail: "Planned capital expenditure and debt financing may absorb future cash; a strong year is not a dividend forecast."
-      sources: "[S01]"
+    - title: "A new large shareholder changes the questions"
+      detail: "October block trades and the November AGM notice put board rights, strategy and related-party dealings in focus. Greenview beneficial ownership remains independently unconfirmed."
+      sources: "[M01][M02][M03]"
     - title: "The base scenarios are below the price"
       detail: "The five- and ten-year estimates are conditional, not verified fair values or a trading recommendation."
       sources: "[S01][S03][S05]"
@@ -73,9 +91,11 @@ editorial:
         - {label: "MARKET", value: 194.45, market: true}
 ---
 
-**Issue 001 · Independent company research · Research cut-off: 14 November 2026**
+**Issue 001 · Independent company research · Revision 1.1 (18 November 2026) · Original financial-model evidence cut-off: 14 November 2026**
 
 **Reader's note:** I am publishing this analysis with open questions, not claiming it is perfect or presenting a definitive price target. Figures and assumptions that still need independent verification are collected in **Notes**, immediately before **References**.
+
+**Correction notice — 18 November 2026:** The first version omitted the 19 October KPC block trade, Dangote's subsequent public statement about acquiring approximately one-quarter of KPC, and the 11 November AGM notice identifying Greenview Oil Trading Corp. as a 24.9% shareholder with board nomination rights. These events predate the original report's 14 November research cut-off and should have been included. This version adds the evidence and governance analysis; the five- and ten-year DCF scenarios have **not** been recomputed or raised on speculation. [M01][M02][M03][M05]
 
 ## Abstract
 
@@ -87,13 +107,15 @@ Our base cash-flow scenarios value KPC at **KES 124.57 billion over five years**
 
 Two risks deserve close attention. First, the IPO forecast envisaged **KES 110.32 billion of spending on fixed assets and intangibles from FY2026 to FY2030**. That was a forecast, not audited actual spending. Second, a proposed refinery in Lamu could either send more fuel through KPC's network or draw volume away through other routes. We have no verified KPC transport agreement for the refinery. [S01][O03][O04][O05]
 
-**Current verdict:** KPC appears to own valuable assets and generate cash, but **the shares do not look underpriced under our base assumptions**. We cannot make a firm call until we check the accounts and capital plan.
+**Material ownership development:** Approximately **4.5 billion KPC shares** changed hands on 19 October 2026 for a reported **KES 42.5bn**. Dangote publicly said his group bought roughly **25%** of the company. KPC’s 11 November AGM notice separately named **Greenview Oil Trading Corp.** as a **24.9%** shareholder entitled to nominate a director. The issuer’s notice does **not** identify Greenview’s ultimate beneficial owners. We treat the connection reported by journalists as **reported, not independently proven from the issuer notice**. The share transfer was on the secondary market, not a cash injection into KPC. [M01][M02][M03][M05]
+
+**Current verdict:** KPC appears to own valuable assets and generate cash, but **the shares do not look underpriced under our base assumptions**. Strategic shareholder involvement may improve future volumes or returns, but it may also alter governance and create conflicts; our model includes no uncontracted uplift. We cannot make a firm call until we check the accounts, capital plan and new shareholder-related transactions.
 
 ## Introduction
 
 **Question.** At the 13 November 2026 share price, does KPC offer enough value for its assets, cash generation and long-term business risks?
 
-This report examines the business, its last five reported financial years, the latest FY2026 results, its assets and cash flows, two discounted valuations, and threats to the transport routes on which its revenue depends. We use the IPO memorandum, company disclosures, regulator data, signed accounts where available, and attributed reporting. References appear as bracketed source IDs that resolve in **Sources**.
+This report examines the business, its last five reported financial years, the latest FY2026 results, its assets and cash flows, two discounted valuations, and threats to the transport routes on which its revenue depends. We use the IPO memorandum, company disclosures, regulator data, signed accounts where available, and attributed reporting. References appear as bracketed source IDs that resolve in **References**.
 
 **How to read it.** We mark company figures as reported, calculations as derived, and forecasts as assumptions. Five-year history is not always comparable because KPRL entered the group in FY2024. The 11% valuation rate is an investor assumption; the five- and ten-year values are scenarios, not established fair values. The FY2025 profit discrepancy and FY2026 capital-spending detail are still open. This published analysis does not replace an independent verification of the underlying sources.
 
@@ -112,8 +134,26 @@ This is a guide, not an accounting formula. The fee changes with distance, servi
 
 KPC's main assets include pipelines, pumps, tanks and inland facilities. The FY2024 company-only fixed-asset note reports KES 58.24 billion for pipelines, pumps and tanks, within KES 83.33 billion of net property, plant and equipment. These are accounting values, not an independent estimate of what the assets could be sold for. [S14]
 
-KPC acquired Kenya Petroleum Refineries Limited (KPRL) in October 2023. The acquisition affects which operations appear in the group accounts, so we must separate acquired activity from underlying growth. We have not reconstructed current ownership percentages from a verified shareholder register. [S01]
+KPC acquired Kenya Petroleum Refineries Limited (KPRL) in October 2023. The acquisition affects which operations appear in the group accounts, so we must separate acquired activity from underlying growth. The October 2026 ownership change and November governance notice are now treated separately below; a complete beneficial-ownership register and the precise Greenview–Dangote legal connection remain unverified. [S01][M03][M05]
 
+
+### October 2026 strategic share transaction and governance
+
+**This ownership change was omitted from the original 18 November publication and is material to the investment case.** It does not by itself change KPC's pipeline assets or operating earnings, but it changes whose commercial interests may influence strategy, capital allocation and oversight.
+
+| Date | Established or reported development | Evidence level and limitation |
+|---|---|---|
+| **19 October 2026** | A block of approximately **4.5bn existing KPC shares** traded at a reported aggregate value around **KES 42.5bn**, equal to roughly **24.76%** of issued shares. | The transaction was reported from Nairobi Securities Exchange trading and market coverage; individual seller and buyer identities were not established in that initial trade report. [M01] |
+| **21 October 2026** | Aliko Dangote publicly stated that his group had purchased about **25% of KPC** to support petroleum-product distribution in East Africa. | The investor's reported statement is strong evidence of his group's intent, not an audited beneficial-ownership register. [M02][M04] |
+| **11 November 2026** | KPC's AGM notice named **Greenview Oil Trading Corp.** as the holder of **24.9% of issued capital**, bought in the secondary market, with a **right to nominate a director**. NSSF consequently lost the right attached to its previous largest-institutional-investor position. | Issuer announcement as transcribed by multiple reporters. The notice does **not** identify Greenview's owners or its nominee; the issuer PDF should be checked directly in the next source audit. [M03][M05] |
+
+**The percentages have different presentation bases.** The approximately **24.76%** block-trade figure and **24.9%** issuer AGM disclosure should not be silently treated as precisely identical quantities or proof of the same legal owner. News reports link Greenview to Dangote; we have **not** independently reconstructed that entity's share register or beneficial ownership. [M01][M03][M05]
+
+**Economic effect, not headlines.** This was a sale of **existing shares between holders**, not a primary equity issuance. It therefore did **not** itself provide KPC with KES 42.5bn of new project funding. A strategic investor could provide demand, commercial coordination, capital access or better governance, but those gains become shareholder value only through signed agreements, realizable margins, project returns and cash distributions. KPC's regulated tariffs, procurement requirements and duties to minority shareholders still matter.
+
+**Governance and related-party questions.** A major fuel producer/distributor with board influence could help secure throughput; it might also prefer transactions that benefit its refining or marketing interests. Monitor the director nomination, independent-board composition, related-party disclosures, volume or take-or-pay agreements, preferential terms, pipeline expansion financing, and how the Kenyan and Ugandan public shareholders exercise their rights. No collusion or improper transaction is alleged here.
+
+**Why the valuation has not changed mechanically.** Our **KES 10.70** dated share-price reference (13 November) already **followed** the October acquisition news. The **KES 124.57bn** five-year and **KES 144.70bn** ten-year base DCF values are *pre-synergy scenarios* with no evidence-backed incremental cash-flow forecast from a new owner. Do not add the block-trade purchase price to corporate cash flows or assume an unapproved proposed expansion is funded. Before repricing the model, obtain binding commercial agreements, approved capex and financing, route-throughput forecasts and a proper ownership register. [S01][S05][M01][M02][M03]
 
 ## Financial Review (Fundamental Analysis)
 
@@ -402,6 +442,12 @@ On **30 September 2026**, officials held a groundbreaking for a proposed **700,0
 
 **What this means for value:** A refinery in Lamu could feed KPC through a new connection. It could also use a separate route and take traffic from KPC's Mombasa network. Neither outcome is proven. Our core five- and ten-year valuations do not yet assign either outcome a cash figure.
 
+### Ownership and potential distribution alignment
+
+The **October acquisition and the proposed Lamu refinery are separate events**. Dangote's strategic investment creates a possible commercial reason to move more of the group's refined products through KPC, but ownership alone does not guarantee KPC a contract, a minimum transport volume or higher tariffs. Nor is KPC guaranteed to operate any future Lamu interconnection. A distribution or infrastructure agreement would need evaluation on its own pricing, capital commitments and conflicts-of-interest safeguards. [M02][M03][M04][O03][O05]
+
+**Follow-up underwriting:** Obtain KPC board and AGM disclosures; identify the nominated director and ultimate owners of Greenview; obtain any marketing, storage or transport arrangements with Dangote-linked firms; distinguish shareholder-provided project finance from lending and KPC equity; model route-by-route incremental cash flows only after commitments are public. The market may already price in some expected benefit because the 13 November quote postdates the October news. [M03][M05][S05]
+
 ### The Dangote refinery and changes in supply routes
 
 **Fuel made in Nigeria and shipped to Mombasa.** If oil marketers buy refined fuel from Dangote's Nigerian plant, land it in Mombasa and then use KPC, KPC may still earn the same transport fees. Who refined the fuel matters less to KPC than where it lands and how it travels inland. [O05][O07]
@@ -469,6 +515,7 @@ We have not assigned odds or prices to these cases. There is no verified KPC–L
 | Priority | Needed evidence | Why it changes the valuation |
 |---|---|---|
 | High | KPC signed FY2026 annual report and latest corporate investment plan | Asset useful-life/impairment, capex, debt and exposure updates |
+| High | KPC shareholder register, Greenview ultimate-ownership evidence, director nominee and related-party contracts | Control, governance, commercial incentives and evidence-based valuation implications |
 | High | Dangote Lamu project financing/FID, engineering works, product off-take agreements, corridor strategy | Whether a real output source enters KPC or a rival system |
 | High | Kenya/EPRA route and destination-specific pipeline data; updated regulated tariff schedule | Price × volume cash earnings by route |
 | High | Uganda and Tanzania refinery construction status and transit demand allocation | Western transit competition and potential KPC volume loss |
@@ -483,6 +530,8 @@ We have not assigned odds or prices to these cases. There is no verified KPC–L
 
 **Risks:** EPRA limits tariffs. Projects cost money and can run late. KPC may borrow more to build them. Other ports and routes may take traffic. Power costs, outages, environmental claims and contract decisions can also cut cash flow. In the longer run, new transport technology may reduce fuel demand. [S01][S06][S07]
 
+**Governance update:** The emergence of a roughly quarter-sized strategic shareholder can strengthen distribution prospects but increases the importance of independent scrutiny of related-party pricing and capital commitments. The identity of Greenview’s ultimate beneficial owner was not established directly from the issuer AGM notice. [M02][M03][M05]
+
 **What would weaken this thesis?** Profit that repeatedly fails to turn into cash; new projects that earn less than they cost; unexplained account changes; environmental costs above provisions; borrowing KPC cannot service; or lost transit business to other routes.
 
 ### Current investment verdict
@@ -495,9 +544,10 @@ We have not assigned odds or prices to these cases. There is no verified KPC–L
 | Is the historical five-year growth fully organic/comparable? | **No**: 2024 KPRL consolidation and FY2025 accounting conflict must be handled. |
 | Are distributable equity cash flows reliably forecast? | **Not yet**: capex, financing, statement classification and project return information are insufficient. |
 | Is KPC definitively undervalued at 10.70? | **Not established**. The provisional base scenarios are lower than price, but highly uncertain. |
+| Is the October strategic stake priced into our cash-flow model? | **No verified synergy uplift.** The 13 November market quote postdates the acquisition announcement; contract economics and governance remain to be underwritten. |
 | Publishable as a final price target? | **No**. Needs audit reconciliation and capital-spending underwriting. |
 
-**Next research task:** Obtain the full FY2026 signed statements, the notes explaining the FY2025 changes and the latest approved spending and loan plans. Then rebuild the cash-flow model and test whether each new project earns enough to cover the capital it uses.
+**Next research task:** Obtain KPC’s definitive ownership/beneficial-owner disclosures, the Greenview board nomination, material related-party contracts, the full FY2026 signed statements, the notes explaining the FY2025 changes and the latest approved spending and loan plans. Then rebuild the cash-flow model and test whether each new project earns enough to cover the capital it uses.
 
 ## Notes
 
@@ -511,6 +561,8 @@ The following items remain **unverified, incomplete or assumption-dependent** at
 6. **Capital spending forecasts are not actual expenditure.** The IPO's approximately **KES 110.32bn** FY2026–FY2030 fixed-asset/intangible spending plan was prospective. We have not independently verified the latest approved project-by-project capital budget, full FY2026 capex cash payments, financing terms or expected returns. [S01]
 7. **Lamu refinery and regional-route impacts are uncertain.** Reported groundbreaking and proposals do not prove financing close, construction completion, KPC interconnections, signed transport commitments or future diversion of volumes. The report's upside/downside route analysis is conditional, not a forecast of an operating refinery. [O03][O04][O05][O08][O09]
 8. **Audit findings, ownership and asset claims need follow-up.** The complete FY2025 Auditor-General opinion and subsequent FY2026 audit notes have not been independently reviewed in full. Current beneficial ownership, environmental liabilities, contingencies, title issues and the realizable value of infrastructure assets require direct primary-document confirmation. [S01][S14][S16]
+
+9. **Major shareholder identity and strategic upside remain partly unverified.** KPC’s 11 November notice reportedly identifies Greenview Oil Trading Corp. as a 24.9% shareholder entitled to nominate a director. Dangote publicly described an approximately 25% acquisition, and reporting links the events; **the issuer notice does not identify the beneficial owners of Greenview**. The purchase was a secondary-market transfer, not new KPC funding. We have not verified a binding Dangote–KPC distribution contract, board nominee or financed expansion. The dated share price postdates the news, but the DCF has **not** been adjusted for projected synergies. [M01][M02][M03][M04][M05]
 
 **Interpretation:** Where a figure is described as *reported*, that means it appears in an identified disclosure or attributed coverage—not that Meyo Insights has audited it. *Derived* indicates our arithmetic from stated inputs; *forecast*, *scenario* and *provisional* indicate judgment rather than independently verified facts. We may revise conclusions as stronger evidence arrives.
 
@@ -548,6 +600,18 @@ The following items remain **unverified, incomplete or assumption-dependent** at
 - **[O08] Reuters**, 7 July 2026: Dangote's announced Lamu refinery financing intention; investment/funding details not a verified financed budget. https://www.reuters.com/business/energy/dangote-fund-proposed-kenya-refinery-with-cash-bonds-an-ipo-2026-07-07/
 - **[O09] Government of Uganda**, 5 October 2026: proposed complementarity of regional refinery projects and Uganda's own refining intentions. https://www.op.go.ug/news-updates/news-and-updates/general/news-and-updates/president-museveni-backs-regional-oil-0
 
+### Ownership, corporate actions and governance — correction sources
+
+[M01] **Business Daily Africa**, 19 October 2026, report of approximately 4.5 billion KPC shares transferred through the NSE block market for KES 42.5bn; buyer initially unidentified: https://www.businessdailyafrica.com/bd/corporate/companies/mystery-investors-transfer-kpc-shares-worth-sh42bn-5638330  
+[M02] **S&P Global Commodity Insights**, 21 October 2026, coverage of Aliko Dangote's announcement of an approximately 25% KPC stake and distribution rationale: https://www.spglobal.com/energy/en/news-research/latest-news/refined-products/102126-dangote-buys-25-stake-in-kenyas-state-owned-pipeline-company  
+[M03] **Kenya Pipeline Company**, *Notice of the 46th Annual General Meeting*, dated 11 November 2026, item 2.3.6 (Greenview 24.9% and director-nomination right). This primary URL was identified, but the PDF could not be retrieved directly for this correction; wording was corroborated through the reporting in [M05] and the independent transcription below. **The official notice does not disclose Greenview's beneficial owners**: https://www.kpc.co.ke/download/87/investor-relations/13765/notice-of-the-46th-annual-general-meeting.pdf  
+[M04] **Business Daily Africa**, 21 October 2026, direct attributed Dangote statement on acquiring a 24.76% stake: https://www.businessdailyafrica.com/bd/markets/capital-markets/dangote-buys-24pc-stake-of-kenya-pipeline-company-5640152  
+[M05] **Business Daily Africa**, 16 November 2026, Greenview shareholding, NSSF board transition and the upcoming AGM: https://www.businessdailyafrica.com/bd/corporate/companies/dangote-replaces-nssf-in-kpc-boardroom-shake-up-5673252  
+[M06] **Business Radar**, 12 November 2026, independent quotation and image of the 11 November issuer AGM notice, including the 24.9% block and directorship: https://businessradar.co.ke/kpc-agm-2026/  
+
 ### Editorial record and corrections
 
-This is Meyo Insights Issue 001, first published 18 November 2026. It develops the v6.0 analysis from evidence available at the research cut-off of 14 November 2026; it is **not** a new audit of the financial statements. Material corrections will be dated and explained in future revisions rather than silently changing the investment conclusion. Readers can submit corrections through [@meyo_insights](https://x.com/meyo_insights).
+- **18 November 2026, revision 1.1:** Added the previously omitted October KPC secondary-market stake transaction, Dangote's publicly reported announcement, Greenview Oil Trading Corp.'s 24.9% AGM-disclosed ownership and nomination rights, governance/related-party implications, and revised Notes and References. The omission was present at the first publication despite the events predating its source cut-off. **No DCF output, cash-flow assumption, or target price was changed.**
+- **18 November 2026, original publication:** Full v6.0 financial/industry research based on a 14 November evidence cut-off.
+
+This remains independent research, **not a new financial audit**. We will date and explain material corrections rather than overwrite conclusions without a changelog. Send evidence or corrections to [@meyo_insights](https://x.com/meyo_insights).
