@@ -14,6 +14,8 @@
   if (!banner || !accept || !reject || !settings) return;
 
   let loaded = false;
+  let allowed = savedChoice() === 'granted';
+  window.meyoInsightsAnalyticsAllowed = function () { return allowed; };
 
   function savedChoice() {
     try { return window.localStorage.getItem(KEY); } catch (_) { return null; }
@@ -49,6 +51,7 @@
 
   function select(choice) {
     const previouslyLoaded = loaded;
+    allowed = choice === 'granted';
     persistChoice(choice);
     banner.hidden = true;
 
