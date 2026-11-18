@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://meyoinsights.github.io/sitemap.xml
