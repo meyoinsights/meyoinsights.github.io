@@ -1,5 +1,6 @@
 ---
 import SiteLayout from './SiteLayout.astro';
+import { sectionize } from '../lib/sectionize.mjs';
 const {frontmatter} = Astro.props;
 const title = frontmatter.title ?? 'Research note';
 const description = frontmatter.description ?? 'Original research and investment learning.';
@@ -15,9 +16,13 @@ const issue = frontmatter.issue;
 const researchAsOf = frontmatter.researchAsOf;
 const marketReference = frontmatter.marketReference;
 const publicationStatus = frontmatter.publicationStatus;
+const rendered = await Astro.slots.render('default');
+const reading = sectionize(rendered);
+const publicationId = (frontmatter.canonicalUrl ?? Astro.url.pathname).split('/').filter(Boolean).at(-1) ?? slug;
+const openSection = (section, i) => i === 0 || section.id === 'abstract';
 ---
 <SiteLayout title={title} description={description}>
-  <article class="article wrap">
+  <article class="article wrap" data-research-article data-publication-id={publicationId} data-publication-version={version ?? 'unversioned'} data-publication-title={title}>
     {archived ? <a class="eyebrow" href={canonicalUrl ?? '/blog/'}>← Latest edition</a> : <a class="eyebrow" href="/blog/">← Back to research</a>}
     <p class="eyebrow">{frontmatter.category ?? 'RESEARCH JOURNAL'}{issue ? ` / ISSUE ${issue}` : ''}{frontmatter.exchange && frontmatter.ticker ? ` / ${frontmatter.exchange}: ${frontmatter.ticker}` : ''}</p>
     <h1>{title}</h1>
@@ -29,7 +34,21 @@ const publicationStatus = frontmatter.publicationStatus;
     {(researchAsOf || marketReference || publicationStatus) && <div class="publication-meta">{researchAsOf && <span><strong>Research cut-off</strong> {researchAsOf}</span>}{marketReference && <span><strong>Price reference</strong> {marketReference}</span>}{publicationStatus && <span><strong>Status</strong> {publicationStatus}</span>}</div>}
     {!archived && previousVersions.length > 0 && <p class="prior-editions"><strong>Previous editions</strong> {previousVersions.map((v) => <span><a href={v.article}>v{v.version} article</a> · <a href={v.pdf}>PDF</a></span>)}</p>}
     {pdfUrl && <p class="download-publication"><a href={pdfUrl} download type="application/pdf">Download the formatted research PDF (A4) ↓</a></p>}
-    <div class="prose"><slot /></div>
+    {reading.sections.length > 0 && <nav class="article-toc" aria-label="Table of contents">
+      <h2>Table of contents</h2>
+      <ol>{reading.sections.map(section => <li><a href={ '#' + encodeURIComponent(section.id) }>{section.title}</a></li>)}</ol>
+      {reading.collapsible && <div class="reading-actions"><button type="button" data-expand-sections>Expand all</button><button type="button" data-collapse-sections>Collapse all</button></div>}
+    </nav>}
+    <div class="prose">
+      {reading.collapsible ? <>
+        <Fragment set:html={reading.intro} />
+        {reading.sections.map((section, i) => <details class="article-section" id={section.id} data-article-section data-section-id={section.id} open={openSection(section,i)}>
+          <summary><Fragment set:html={section.headingHtml} /></summary>
+          <div class="article-section-content" set:html={section.contentHtml} />
+        </details>)}
+      </> : <Fragment set:html={rendered} />}
+    </div>
+    {reading.collapsible && <script is:inline defer src="/article-reading.js"></script>}
     <aside class="article-follow" aria-label="Follow Meyo Insights"><p class="eyebrow">Continue the conversation</p><h2>Follow the research, not just the headlines.</h2><p>For more company studies, industry research and ideas about investing better, follow Meyo Insights on X.</p><a class="button" href="https://x.com/meyo_insights" target="_blank" rel="noopener noreferrer">Follow @meyo_insights ↗</a></aside>
     <p class="disclaimer">This journal is for research and education, not personalized investment advice. Read the sources and limitations before relying on a conclusion.</p>
   </article>
