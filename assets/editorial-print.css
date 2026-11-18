@@ -96,3 +96,6 @@ a{color:#255747;text-decoration:underline;overflow-wrap:anywhere;}
 .publication-outro{margin-top:15mm;padding:7mm 0;border-top:2pt solid var(--meyo);font:400 9pt var(--sans);}
 .publication-outro strong{font:800 12pt var(--sans);}
 .publication-outro p{margin:4mm 0;}.publication-outro small{font:400 7pt var(--sans);}
+/* Edition identity in the print cover; primary narrative design unchanged. */
+.publication-cover .cover-band p{overflow-wrap:anywhere;}
+.research-report>h2:last-of-type{break-after:avoid;}

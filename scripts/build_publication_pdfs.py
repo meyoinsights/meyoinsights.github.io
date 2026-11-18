@@ -91,8 +91,10 @@ def cover(meta: dict):
     published = safe(pub.strftime("%d %b %Y").upper() if isinstance(pub, date) else str(pub))
     asof = safe(meta.get("researchAsOf", "Not specified"))
     market = safe(meta.get("marketReference", "Not specified"))
+    edition = safe("VERSION " + str(meta["version"]) + " / " + str(meta.get("versionTimestamp", ""))) if meta.get("version") else ""
+    archived = " / ARCHIVED EDITION" if meta.get("archived") else ""
     return f'''<section class="publication-cover">
- <div class="cover-band"><div class="cover-brand">MEYO<br>INSIGHTS<span>.</span></div><p>THE RESEARCH JOURNAL<br>ISSUE {issue} / COMPANY RESEARCH</p></div>
+ <div class="cover-band"><div class="cover-brand">MEYO<br>INSIGHTS<span>.</span></div><p>THE RESEARCH JOURNAL<br>ISSUE {issue} / COMPANY RESEARCH<br>{edition}{archived}</p></div>
  <div class="cover-issuer"><small>{issuer}</small><strong>{exchange}: {ticker}</strong><small>PUBLISHED {published}<br>ISSUE {issue}</small></div>
  <div class="cover-story"><p class="cover-label">MEYO INSIGHTS / ORIGINAL RESEARCH</p><h1>{title}</h1><h2>{official}</h2><p class="cover-deck">{deck}</p></div>
  <div class="cover-art">{pipeline_art()}</div>
@@ -179,6 +181,8 @@ def validate_publication_preflight(meta: dict, body: str):
     A machine cannot certify that the searches were done or every material event
     was found. This gate makes the editorial attestation explicit and auditable.
     """
+    if meta.get("archived") is True:
+        return  # Legacy immutable snapshots precede the modern preflight contract
     if not meta.get("ticker") or not meta.get("exchange"):
         return  # non-equity articles use a separate policy
     from datetime import datetime
@@ -244,9 +248,12 @@ def build_html(meta: dict, body: str):
         tail = re.sub(r'(?<!["\'])https?://[^\s<>]+', make_link, tail)
         rendered = before + "<h2>References</h2>" + tail
     rendered=add_exhibits(meta,rendered)
+    # Absolute site URLs remain clickable when a PDF is downloaded and opened offline.
+    rendered=rendered.replace('href="/versions/', 'href="https://meyoinsights.github.io/versions/')
+    rendered=rendered.replace('href="/reports/', 'href="https://meyoinsights.github.io/reports/')
     return f'''<!doctype html><html lang="en"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><title>{title} | Meyo Insights</title></head><body>
 {cover(meta)}{brief(meta)}
-<main class="research-report"><div class="body-kicker">MEYO INSIGHTS / FULL COMPANY RESEARCH / ISSUE {issue}</div>{rendered}
+<main class="research-report"><div class="body-kicker">MEYO INSIGHTS / FULL COMPANY RESEARCH / ISSUE {issue} / {safe(meta.get("version", "UNVERSIONED"))} / {safe(meta.get("versionTimestamp", ""))}</div>{rendered}
 <div class="publication-outro"><strong>THE PURSUIT OF BETTER INVESTMENT JUDGMENT.</strong><p>Follow the ongoing research at <a href="https://x.com/meyo_insights">x.com/meyo_insights</a></p><small>Published by Meyo Insights. Independent research and education; not personalized investment advice.</small></div>
 </main></body></html>'''
 
@@ -277,11 +284,25 @@ def main():
     css=site/'assets'/'editorial-print.css'
     src=site/'src'/'pages'/'blog'
     out=site/'public'/'reports'
+    archive_src=site/'src'/'pages'/'versions'
     if not css.exists() or not src.is_dir():raise RuntimeError('Missing PDF CSS or public blog')
     out.mkdir(parents=True,exist_ok=True)
     for stale in out.glob('*.pdf'):stale.unlink()
     for post in sorted(src.glob('*.md')):
         generate(post,out/f'{post.stem}.pdf',css)
-    print('Generated',len(list(src.glob('*.md'))),'publication PDFs')
+    archive_count=0
+    if archive_src.is_dir():
+        archive_out=out/'versions'
+        archive_out.mkdir(parents=True,exist_ok=True)
+        for stale in archive_out.glob('*.pdf'):stale.unlink()
+        for post in sorted(archive_src.glob('*.md')):
+            meta,body=parse_article(post)
+            if meta.get('archived') is not True or not meta.get('version'):
+                raise RuntimeError(f"Archived edition requires version and archived=true: {post}")
+            if '## Change log' in body and not meta.get('legacyChangelog'):
+                raise RuntimeError("Historical edition unexpectedly contains a modern change log")
+            generate(post,archive_out/f'{post.stem}.pdf',css)
+            archive_count+=1
+    print('Generated',len(list(src.glob('*.md'))),'current publications and',archive_count,'archived PDFs')
 
 if __name__=='__main__':main()
