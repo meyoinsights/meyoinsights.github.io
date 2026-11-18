@@ -91,8 +91,13 @@ This must not publish.
             "ticker": "KPC", "researchAsOf": "14 November 2026",
             "marketReference": "KES 10.70 · 13 November 2026",
             "publicationStatus": "Independent analysis",
+            "preflight": {"reviewedAt":"2026-11-18","lookbackStart":"2026-08-20",
+                "reviewCategories": {k:["T01"] for k in (
+                    "ownership","governance","leadership","corporate_actions",
+                    "strategic_transactions","regulatory","financials")},
+                "materialEvents": [], "openVerification": "Verified only for test"},
         }
-        rendered = publisher.build_html(meta, "## Notes\n\nUnresolved.\n\n## References\n\n[S01] Example.")
+        rendered = publisher.build_html(meta, "## Notes\n\nUnresolved.\n\n## References\n\n[T01] Example.")
         self.assertIn("ISSUE 001", rendered)
         self.assertIn("NSE: KPC", rendered)
         self.assertIn("14 November 2026", rendered)
@@ -123,6 +128,41 @@ This must not publish.
         }
         with self.assertRaises(ValueError):
             publisher.assert_evidence(metadata, "## Evidence\n\n[S01] Source.")
+
+    def test_equity_preflight_catches_missing_ownership_review(self):
+        meta, body = publisher.parse_article(
+            ROOT / "src/pages/blog/kenya-pipeline-is-share-price-justified.md"
+        )
+        self.assertEqual(meta["preflight"]["materialEvents"][0]["id"],
+                         "KPC-2026-10-19-BLOCK-TRADE")
+        publisher.validate_publication_preflight(meta, body)
+        broken = dict(meta)
+        broken["preflight"] = dict(meta["preflight"])
+        broken["preflight"]["reviewCategories"] = dict(meta["preflight"]["reviewCategories"])
+        del broken["preflight"]["reviewCategories"]["ownership"]
+        with self.assertRaisesRegex(ValueError, "ownership"):
+            publisher.validate_publication_preflight(broken, body)
+
+    def test_equity_preflight_catches_outdated_review(self):
+        meta, body = publisher.parse_article(
+            ROOT / "src/pages/blog/kenya-pipeline-is-share-price-justified.md"
+        )
+        expired = dict(meta)
+        expired["preflight"] = dict(meta["preflight"], reviewedAt="2026-11-01")
+        with self.assertRaises(ValueError):
+            publisher.validate_publication_preflight(expired, body)
+
+    def test_equity_preflight_catches_missing_event_evidence(self):
+        meta, body = publisher.parse_article(
+            ROOT / "src/pages/blog/kenya-pipeline-is-share-price-justified.md"
+        )
+        altered = dict(meta)
+        altered["preflight"] = dict(meta["preflight"], materialEvents=[
+            {"id":"UNSUPPORTED","eventDate":"2026-10-19","sourceIds":["M99"],
+             "disposition":"Undisclosed"}
+        ])
+        with self.assertRaisesRegex(ValueError, "M99"):
+            publisher.validate_publication_preflight(altered, body)
 
 if __name__ == "__main__":
     unittest.main()
