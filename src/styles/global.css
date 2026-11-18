@@ -66,3 +66,23 @@ html{background:var(--paper);color:var(--ink)}body{background:var(--paper)}
 .research-follow{border-top:1px solid var(--line);padding-top:22px;margin-top:55px!important}
 .footer-follow{font-weight:700}.site-footer{margin-top:40px}
 @media(max-width:760px){.site-header{width:calc(100% - 30px)}.site-header nav{gap:12px;flex-wrap:wrap}.site-header nav a{font-size:12px}.hero{padding:70px 0}.feature-layout{grid-template-columns:1fr}.feature-stamp{display:none}.article{max-width:100%}.prose{font-size:17px}.prose h2{font-size:30px}.publication-meta{gap:12px}.article-follow{padding:25px}}
+
+/* Shared long-form article navigation. Native details remain usable without JS. */
+.article-toc{margin:30px 0 24px;padding:22px 24px;border-top:2px solid var(--forest);border-bottom:1px solid var(--line);background:#efeee7}
+.article-toc h2{font:600 24px/1.2 var(--serif);margin:0 0 12px;color:var(--forest)}
+.article-toc ol{margin:0;padding-left:24px;columns:2;column-gap:32px;font-size:14px;line-height:1.55}
+.article-toc li{break-inside:avoid;margin:0 0 9px;padding-left:3px}
+.article-toc a{text-decoration:underline;text-underline-offset:3px}
+.reading-actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:15px}
+.reading-actions button{font:650 12px/1.4 Inter,sans-serif;color:var(--forest);background:transparent;border:1px solid #879b8d;border-radius:3px;padding:8px 12px;cursor:pointer}
+.article-section{border-top:1px solid #b3c5b5;scroll-margin-top:20px}
+.article-section>summary{display:flex;align-items:center;justify-content:space-between;gap:18px;cursor:pointer;list-style:none;padding:22px 0}
+.article-section>summary::-webkit-details-marker{display:none}
+.article-section>summary::after{content:"+";font:500 26px/1 Inter,sans-serif;color:var(--forest);flex:none}
+.article-section[open]>summary::after{content:"−"}
+.prose .article-section>summary h2{margin:0;padding:0;border:0;font-size:clamp(25px,4vw,36px)}
+.article-section-content{padding-bottom:24px}
+.article-section-content :is(h2,h3,h4){scroll-margin-top:20px}
+.article-section>summary:focus-visible,.reading-actions button:focus-visible,.article-toc a:focus-visible{outline:2px solid var(--forest);outline-offset:4px}
+@media(max-width:600px){.article-toc{padding:18px}.article-toc ol{columns:1}}
+@media print{.article-toc,.reading-actions{display:none}.article-section>summary::after{display:none}}
