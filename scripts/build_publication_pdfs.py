@@ -173,7 +173,63 @@ def add_exhibits(meta: dict, rendered: str):
     return rendered
 
 
+def validate_publication_preflight(meta: dict, body: str):
+    """Check recorded editorial evidence, not real-world factual completeness.
+
+    A machine cannot certify that the searches were done or every material event
+    was found. This gate makes the editorial attestation explicit and auditable.
+    """
+    if not meta.get("ticker") or not meta.get("exchange"):
+        return  # non-equity articles use a separate policy
+    from datetime import datetime
+    preflight = meta.get("preflight")
+    if not isinstance(preflight, dict):
+        raise ValueError("Equity publication missing documented preflight review")
+    published = meta.get("pubDate")
+    if isinstance(published, date):
+        publication_date = published
+    else:
+        publication_date = date.fromisoformat(str(published)[:10])
+    reviewed = date.fromisoformat(str(preflight["reviewedAt"]))
+    lookback = date.fromisoformat(str(preflight["lookbackStart"]))
+    if reviewed > publication_date or (publication_date - reviewed).days > 7:
+        raise ValueError("Equity research preflight is dated after publication or too old")
+    if (reviewed - lookback).days < 90:
+        raise ValueError("Material-event review must cover at least 90 days")
+    topics = (
+        "ownership", "governance", "leadership", "corporate_actions",
+        "strategic_transactions", "regulatory", "financials"
+    )
+    categories = preflight.get("reviewCategories")
+    if not isinstance(categories, dict):
+        raise ValueError("Missing event-review categories")
+    for topic in topics:
+        evidence = categories.get(topic)
+        if not isinstance(evidence, list) or not evidence:
+            raise ValueError(f"Missing source IDs for mandatory event-review category: {topic}")
+        for source_id in evidence:
+            if not isinstance(source_id, str) or f"[{source_id}]" not in body:
+                raise ValueError(f"Missing report reference for {topic}: {source_id}")
+    events = preflight.get("materialEvents")
+    if not isinstance(events, list):
+        raise ValueError("Material events register required, even if empty")
+    for event in events:
+        if not all(event.get(k) for k in ("id", "eventDate", "sourceIds", "disposition")):
+            raise ValueError("Incomplete material-event register entry")
+        event_date = date.fromisoformat(event["eventDate"])
+        if not lookback <= event_date <= reviewed:
+            raise ValueError("Material event outside preflight reviewed interval")
+        if not isinstance(event["sourceIds"], list) or not event["sourceIds"]:
+            raise ValueError("Material event missing evidence")
+        for source_id in event["sourceIds"]:
+            if f"[{source_id}]" not in body:
+                raise ValueError(f"Material event source [{source_id}] missing from report")
+    if not preflight.get("openVerification"):
+        raise ValueError("Explicit unresolved verification note required")
+
+
 def build_html(meta: dict, body: str):
+    validate_publication_preflight(meta,body)
     assert_evidence(meta,body)
     title=safe(meta['title']); issue=safe(meta.get('issue', '—'))
     rendered=MD.render(body)
