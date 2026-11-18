@@ -19,9 +19,11 @@ const publicationStatus = frontmatter.publicationStatus;
 const rendered = await Astro.slots.render('default');
 const reading = sectionize(rendered);
 const publicationId = (frontmatter.canonicalUrl ?? Astro.url.pathname).split('/').filter(Boolean).at(-1) ?? slug;
+const canonicalPath = canonicalUrl ?? Astro.url.pathname;
+const articleSchema = {"@context":"https://schema.org","@type":"Article",headline:title,description,author:{"@type":"Person",name:frontmatter.author ?? "Meyo Insights"},publisher:{"@type":"Organization",name:"Meyo Insights"},datePublished:date && !Number.isNaN(+date) ? date.toISOString() : undefined,dateModified:versionTimestamp ?? (date && !Number.isNaN(+date) ? date.toISOString() : undefined),mainEntityOfPage:new URL(canonicalPath,Astro.site ?? Astro.url).href};
 const openSection = (section, i) => i === 0 || section.id === 'abstract';
 ---
-<SiteLayout title={title} description={description}>
+<SiteLayout title={title} description={description} canonicalPath={canonicalPath} archived={archived} articleSchema={articleSchema}>
   <article class="article wrap" data-research-article data-publication-id={publicationId} data-publication-version={version ?? 'unversioned'} data-publication-title={title}>
     {archived ? <a class="eyebrow" href={canonicalUrl ?? '/blog/'}>← Latest edition</a> : <a class="eyebrow" href="/blog/">← Back to research</a>}
     <p class="eyebrow">{frontmatter.category ?? 'RESEARCH JOURNAL'}{issue ? ` / ISSUE ${issue}` : ''}{frontmatter.exchange && frontmatter.ticker ? ` / ${frontmatter.exchange}: ${frontmatter.ticker}` : ''}</p>

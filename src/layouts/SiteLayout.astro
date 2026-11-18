@@ -1,6 +1,7 @@
 ---
 import '../styles/global.css';
-const {title = 'Meyo Insights', description = 'A public research journal exploring businesses, industries, markets and the ideas that help us understand them.'} = Astro.props;
+const {title = 'Meyo Insights', description = 'A public research journal exploring businesses, industries, markets and the ideas that help us understand them.' , canonicalPath = Astro.url.pathname, archived = false, articleSchema = null} = Astro.props;
+const canonical = new URL(canonicalPath, Astro.site ?? Astro.url).href;
 ---
 <!doctype html>
 <html lang="en">
@@ -8,6 +9,11 @@ const {title = 'Meyo Insights', description = 'A public research journal explori
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content={description} />
+    <link rel="canonical" href={canonical} />
+    {archived && <meta name="robots" content="noindex,follow" />}
+    <meta property="og:url" content={canonical} />
+    <meta property="og:type" content={articleSchema ? "article" : "website"} />
+    {articleSchema && !archived && <script type="application/ld+json" set:html={JSON.stringify(articleSchema).replace(/</g, "\\u003c")} />}
     <meta name="theme-color" content="#173d35" />
     <meta property="og:site_name" content="Meyo Insights" />
     <meta property="og:title" content={title} />
